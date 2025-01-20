@@ -1,0 +1,70 @@
+/* Desktop: 1200px > */
+/* Планшет (гор.): 960px-1200px > */
+/* Планшет (верт.): 640-960px > */
+/* Телефон (гор.): 480-640px > */
+/* Телефон (верт.): 320-480px > */
+
+:root {
+    --color-primary-green: #00CF00;
+    --color-secondary-green: #009500;
+    --color-primary-brown: #745540;
+    --color-secondary-brown: #411F03;
+    --color-menu-text: #FEFBEC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+}
+
+.header__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__nav {
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+    background: var(--color-secondary-brown);
+}
+
+.header__nav-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary-brown);
+    color: var(--color-menu-text);
+    padding: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.header__nav-item:hover {
+    background-color: var(--color-secondary-brown);
+}
+
+.header__login {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.header_login-link {
+    color: var(--color-secondary-brown);
+    font-size: 15px;
+}
+.header_login-link:hover {
+    color: var(--color-primary-brown);
+}
