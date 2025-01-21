@@ -1,0 +1,272 @@
+/* Desktop: 1200px > */
+/* Планшет (гор.): 960px-1200px > */
+/* Планшет (верт.): 640-960px > */
+/* Телефон (гор.): 480-640px > */
+/* Телефон (верт.): 320-480px > */
+
+:root {
+    --color-primary-green: #00CF00;
+    --color-secondary-green: #009500;
+    --color-primary-brown: #745540;
+    --color-secondary-brown: #411F03;
+    --color-menu-text: #FEFBEC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: 1px solid var(--color-secondary-brown);
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+.header {
+    display: flex;
+}
+
+.header__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__nav {
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+    background: var(--color-secondary-brown);
+}
+
+.header__nav-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary-brown);
+    color: var(--color-menu-text);
+    padding: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.header__nav-item:hover {
+    background-color: var(--color-secondary-brown);
+}
+
+.header__login {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.header_login-link {
+    color: var(--color-secondary-brown);
+    font-size: 15px;
+}
+
+.header_login-link:hover {
+    color: var(--color-primary-brown);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f5e9;
+    color: #333;
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.article-image img {
+    max-width: 150px;
+    border-radius: 4px;
+}
+
+.article-content {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.article-content h2 {
+    color: var(--color-secondary-brown);
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.article-content p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.article-products {
+    transition: all 0.5s ease-in-out;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    margin: 1em auto;
+}
+
+.product {
+    max-width: 200px;
+}
+
+.product-cost {
+    color: var(--color-secondary-green);
+    font-weight: bold;
+}
+
+.product-info {
+    display: flex;
+}
+
+.product-cart-icon:hover {
+    src: "./assets/img/cart_small_hover.png";
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: var(--color-primary-brown);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-secondary-green);
+}
+
+.section-login {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+    background-color: #fafafa;
+    border: 1px solid #bbb;
+    margin: 60px 0;
+    width: 300px;
+}
+
+.login-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 30px;
+    background-color: var(--color-primary-brown);
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--color-menu-text);
+}
+
+.social-link:hover {
+    background-color: var(--color-secondary-brown);
+}
+
+
+.input-hint {
+    display: flex;
+    flex-direction: column;
+}
+
+.hint {
+    font-size: 75%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#00C000, #008400);
+    color: white;
+    /* Задает цвет текста для контраста */
+    padding: 10px;
+    /* Внутренний отступ */
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 15px;
+}
+
+.footer-item-link {
+    color: var(--color-menu-text);
+    text-decoration: none;
+    font-size: 70%;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+}
