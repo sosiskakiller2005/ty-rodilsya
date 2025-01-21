@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
   button.addEventListener('click', function () {
     if (products.classList.contains('hidden')) {
       products.classList.remove('hidden');
+      products.classList.add('visible')
       this.textContent = 'СВЕРНУТЬ ДЕСЯТИЛЕТИЕ';
     } else {
+      products.classList.remove('visible')
       products.classList.add('hidden');
       this.textContent = 'РАЗВЕРНУТЬ ДЕСЯТИЛЕТИЕ';
     }
