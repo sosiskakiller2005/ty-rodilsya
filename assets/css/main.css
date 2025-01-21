@@ -21,6 +21,10 @@
     display: none;
 }
 
+.visible {
+    display: flex;
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -118,6 +122,27 @@ body {
 
 .article-products{
     transition: all 0.5s ease-in-out;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    margin: 1em auto;
+}
+
+.product {
+    max-width: 200px;
+}
+
+.product-cost {
+    color: var(--color-secondary-green);
+    font-weight: bold;
+}
+
+.product-info {
+    display: flex;
+}
+
+.product-cart-icon:hover {
+    src: "./assets/img/cart_small_hover.png";
 }
 
 .buttons {
@@ -141,4 +166,36 @@ button:hover {
     background-color: var(--color-secondary-green);
 }
 
+.footer {
+  background-image: url(/assets/img/footer_b.png);
+  background-size: cover; /* Масштабирует картинку */
+  background-position: center; /* Центрирует картинку */
+  background-repeat: no-repeat; /* Отключает повторение */
+  color: white; /* Задает цвет текста для контраста */
+  padding: 10px; /* Внутренний отступ */
+  min-height: 10em;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em  ;
+}
 
+.footer-item {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-right: 1px solid var(--color-menu-text);
+    padding: 15px;
+}
+
+.footer-item-link {
+    color: var(--color-menu-text);
+    text-decoration: none;
+    font-size: 70%;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+}
