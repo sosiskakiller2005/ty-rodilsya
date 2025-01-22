@@ -14,7 +14,8 @@
         <header class="header">
             <div class="header__left">
                 <a href="index.php?page=home">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.png" alt="Логотип" class="header__logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Логотип"
+                        class="header__logo">
                 </a>
             </div>
             <div class="header__right">
@@ -27,6 +28,9 @@
                     <a href="#" class="header__nav-item">Оптовым покупателям</a>
                     <a href="#" class="header__nav-item">Корпоративным заказчикам</a>
                 </nav>
+                <a href="#" class="header__hamburger-btn">
+                        <i class="fa-solid fa-bars"></i>
+                </a>
                 <div class="header__login">
                     <a href="#" class="header_login-link">У меня есть код. Смотреть онлайн</a>
                     <a href="index.php?page=page-registration" class="header_login-link">Регистрация покупателя</a>
