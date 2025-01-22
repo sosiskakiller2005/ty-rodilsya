@@ -31,6 +31,17 @@
                 <a href="#" class="header__hamburger-btn">
                         <i class="fa-solid fa-bars"></i>
                 </a>
+                <ul class="menu">
+                    <button id="closeBtn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <li><a href="#index.php?page=page-login">Личный кабинет (вход/регистрация)</a></li>
+                    <li><a href="#about">Видеооткрытка с фильмами 1934 - 1994 год</a></li>
+                    <li><a href="#services">Индивидуальный Проект</a></li>
+                    <li><a href="#contact">Оптовым покупателям</a></li>
+                    <li><a href="#contact">Корпоративным заказчикам</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                    </ul>
                 <div class="header__login">
                     <a href="#" class="header_login-link">У меня есть код. Смотреть онлайн</a>
                     <a href="index.php?page=page-registration" class="header_login-link">Регистрация покупателя</a>
