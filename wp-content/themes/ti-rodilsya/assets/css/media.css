@@ -4,7 +4,11 @@
 /* Телефон (гор.): 480-640px > */
 /* Телефон (верт.): 320-480px > */
 
-@media screen and (min-width: 640px) and (max-width: 959px){
+@media screen and (min-width: 320px) and (max-width: 959px){
+    .container {
+        max-width: 900px;
+    }
+
     .header__hamburger-btn {
         display: flex;
         align-items: center;
@@ -12,7 +16,7 @@
         
         width: 40px;
         height: 40px;
-
+        background-color: var(--color-primary-brown);
         text-decoration: none;
     }
 
@@ -23,4 +27,37 @@
     .header__nav {
         display: none;
     }
+
+    .menu {
+        display: none; /* Прячем меню */
+        flex-direction: column;
+        position: fixed; /* Фиксируем меню */
+        top: 0;
+        right: 0;
+        width: 33%; /* Меню занимает всю ширину */
+        height: 100%; /* Меню занимает всю высоту */
+        background-color: white; /* Полупрозрачный черный фон */
+        z-index: 1000; /* Поверх всего контента */
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+      }
+
+      .menu.active {
+        display: flex; /* Показываем меню при активации */
+        right: 0;
+      }
+    
+      .menu li {
+        margin: .5rem;
+        text-align: center;
+      }
+    
+      .menu a {
+        font-size: 50%;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--color-primary-brown);
+      }
 }

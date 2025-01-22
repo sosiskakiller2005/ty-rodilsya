@@ -49,6 +49,7 @@ body {
     font-size: 20px;
     border-radius: 10px;
     background-color: var(--color-primary-brown);
+    align-items: center;
 }
 .header__hamburger-btn:hover {
     background-color: var(--color-secondary-brown);
@@ -77,6 +78,7 @@ input[type="password"]:focus {
 .container {
     max-width: 1140px;
     margin: 0 auto;
+    padding: 0px 20px;
 }
 
 .main-content {
@@ -116,6 +118,23 @@ input[type="password"]:focus {
     background-color: var(--color-secondary-brown);
 }
 
+.menu {
+    list-style: none;
+    display: none;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+  }
+
+  .header__hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
 .header__login {
     display: flex;
     gap: 20px;
@@ -136,7 +155,6 @@ input[type="password"]:focus {
 .article-container {
     display: flex;
     flex-direction: column;
-    width: 900px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
