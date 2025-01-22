@@ -13,7 +13,7 @@
     <div class="container">
         <header class="header">
             <div class="header__left">
-                <a href="./index.html">
+                <a href="index.php?page=home">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.png" alt="Логотип" class="header__logo">
                 </a>
             </div>
@@ -29,8 +29,8 @@
                 </nav>
                 <div class="header__login">
                     <a href="#" class="header_login-link">У меня есть код. Смотреть онлайн</a>
-                    <a href="./page-registration.html" class="header_login-link">Регистрация покупателя</a>
-                    <a href="./page-login.html" class="header_login-link">Вход</a>
+                    <a href="index.php?page=page-registration" class="header_login-link">Регистрация покупателя</a>
+                    <a href="index.php?page=page-login" class="header_login-link">Вход</a>
                 </div>
             </div>
         </header>
