@@ -8,7 +8,7 @@ Template Post Type: page
 <article class="article-container">
     <div class="article-content">
         <div class="article-image">
-            <img src="./assets/img/text-fon.png" alt="Видеооткрытки 1934">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/text-fon.png" alt="Видеооткрытки 1934">
         </div>
         <div class="article-description">
             <h2>ВИДЕООТКРЫТКИ О 30-Х ГОДАХ</h2>
@@ -35,7 +35,7 @@ Template Post Type: page
     <div class="hidden article-products" id="products">
         <article class="product">
             <div class="article-image">
-                <img src="./assets/img/card_list.jpg" alt="1939 год">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card_list.jpg" alt="1939 год">
             </div>
             <p>1939 год</p>
             <div class="product-info">
@@ -45,13 +45,13 @@ Template Post Type: page
             <div class="product-buttons">
                 <button href="#">Описание</button>
                 <button href="#" class="product-cart-button">
-                    <img class="product-cart-icon" src="/assets/img/cart.png" alt="">
+                    <img class="product-cart-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/cart.png" alt="">
                 </button>
             </div>
         </article>
         <article class="product">
             <div class="article-image">
-                <img src="./assets/img/card_list.jpg" alt="1939 год">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card_list.jpg" alt="1939 год">
             </div>
             <p>1939 год</p>
             <div class="product-info">
@@ -61,13 +61,13 @@ Template Post Type: page
             <div class="product-buttons">
                 <button href="#">Описание</button>
                 <button href="#" class="product-cart-button">
-                    <img class="product-cart-icon" src="/assets/img/cart.png" alt="">
+                    <img class="product-cart-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/cart.png" alt="">
                 </button>
             </div>
         </article>
         <article class="product">
             <div class="article-image">
-                <img src="./assets/img/card_list.jpg" alt="1939 год">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card_list.jpg" alt="1939 год">
             </div>
             <p>1939 год</p>
             <div class="product-info">
@@ -77,7 +77,7 @@ Template Post Type: page
             <div class="product-buttons">
                 <button href="#">Описание</button>
                 <button href="#" class="product-cart-button">
-                    <img class="product-cart-icon" src="/assets/img/cart.png" alt="">
+                    <img class="product-cart-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/cart.png" alt="">
                 </button>
             </div>
         </article>

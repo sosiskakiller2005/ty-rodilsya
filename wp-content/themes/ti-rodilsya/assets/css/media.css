@@ -1,0 +1,26 @@
+ /* Desktop: 1200px > */
+/* Планшет (гор.): 960px-1200px > */
+/* Планшет (верт.): 640-960px > */
+/* Телефон (гор.): 480-640px > */
+/* Телефон (верт.): 320-480px > */
+
+@media screen and (min-width: 640px) and (max-width: 959px){
+    .header__hamburger-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        width: 40px;
+        height: 40px;
+
+        text-decoration: none;
+    }
+
+    .header__right {
+        align-items: flex-end;
+    }
+
+    .header__nav {
+        display: none;
+    }
+}
