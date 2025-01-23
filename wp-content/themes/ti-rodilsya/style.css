@@ -189,13 +189,23 @@ input[type="password"]:focus {
 .article-products {
     transition: all 0.5s ease-in-out;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 50px;
     justify-content: center;
     margin: 1em auto;
 }
 
 .product {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     max-width: 200px;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 10px;
 }
 
 .product-cost {
@@ -217,7 +227,11 @@ input[type="password"]:focus {
     gap: 10px;
 }
 
-button {
+.product-button {
+    text-decoration: none;
+}
+
+button, .product-button {
     background-color: var(--color-primary-brown);
     color: #fff;
     border: none;
@@ -228,7 +242,7 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+button:hover, .product-button:hover {
     background-color: var(--color-secondary-green);
 }
 
