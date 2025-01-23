@@ -43,9 +43,14 @@
                     <li><a href="#contact">Контакты</a></li>
                     </ul>
                 <div class="header__login">
+                <?php if (is_user_logged_in()): ?>
+                    <a class="header_login-link" href="index.php?page=page-my-profile">Профиль</a>
+                    <a class="header_login-link" href="<?php echo wp_logout_url(home_url()); ?>">Выход</a>
+                <?php else: ?>
                     <a href="#" class="header_login-link">У меня есть код. Смотреть онлайн</a>
                     <a href="index.php?page=page-registration" class="header_login-link">Регистрация покупателя</a>
                     <a href="index.php?page=page-login" class="header_login-link">Вход</a>
+                <?php endif; ?>
                 </div>
             </div>
         </header>
