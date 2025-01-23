@@ -1,7 +1,6 @@
 <?php 
 /*
 Template Name: Шаблон главной страницы
-Template Post Type: page
 */
 ?>
 

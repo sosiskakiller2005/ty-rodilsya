@@ -1,7 +1,6 @@
 <?php
 /*
 Template Name: Шаблон страницы регистрации
-Template Post Type: page
 */
 ?>
 <?php wp_head(); ?>
