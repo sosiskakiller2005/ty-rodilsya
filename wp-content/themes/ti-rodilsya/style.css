@@ -246,6 +246,22 @@ button:hover, .product-button:hover {
     background-color: var(--color-secondary-green);
 }
 
+.single-product {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.single-product-content {
+    display: flex;
+    gap: 20px;
+}
+
+.single-product-button {
+    display: flex;
+    justify-content: space-between;
+}
+
 .section-login {
     display: flex;
     justify-content: center;
