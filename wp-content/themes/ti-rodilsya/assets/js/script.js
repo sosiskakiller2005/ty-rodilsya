@@ -35,5 +35,3 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.remove("active");
   })
 });
-
-document.addEventListener()
