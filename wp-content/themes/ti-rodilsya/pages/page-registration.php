@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             </a>
         </div>
 
-        <p>или используйте свой аккаут</p>
+        <p>или используйте свой аккаунт</p>
         <input type="text" name="username" id="username" placeholder="Введите имя" required>
         <div class="input-hint">
             <input type="text" name="email" id="email" placeholder="Введите почту" required>
