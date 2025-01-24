@@ -25,6 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 ?>
 
+<?php get_header(); ?>
+
 <section class="section-login">
     <form class="login-form" method="post">
         <h2>Регистрация</h2>
@@ -56,3 +58,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     </form>
 </section>
 </div>
+
+<?php get_footer(); ?>
