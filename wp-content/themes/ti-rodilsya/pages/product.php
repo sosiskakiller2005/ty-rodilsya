@@ -1,11 +1,33 @@
+<?php 
+/*
+Template Name: Шаблон описания продукта
+*/
+?>
+
+<?php
+// Подключаем WordPress и WooCommerce
+include 'wp-load.php';
+
+// Получаем ID товара из URL
+$product_id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+
+// Проверяем, существует ли товар
+$product = wc_get_product($product_id);
+if (!$product) {
+    echo "Товар не найден.";
+    exit;
+}
+?>
+
+
 <section class="single-product">
-    <h3>Название продукта</h3>
+    <h3><?php echo esc_html($product->get_name()); ?></h3>
     <div class="single-product-content">
-        <img src="" alt="">
-        <p>Описание</p>
+        <img src="<?php echo esc_url(wp_get_attachment_url($product->get_image_id())); ?>" alt="">
+        <p>Описание <?php echo wpautop($product->get_description()); ?></p>
     </div>
     <div class="single-product-button">
-        <p>Цена</p>
+        <p><strong>Цена:</strong> <?php echo esc_html($product->get_price()); ?> руб.</p>
         <a href="#" class="product-button">
             <i class="fa-solid fa-cart-shopping"></i>
             <span>В корзину</span>

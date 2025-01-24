@@ -13,7 +13,7 @@
     <div class="container">
         <header class="header">
             <div class="header__left">
-                <a href="index.php?page=home">
+                <a href="<?php echo get_permalink(81); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Логотип"
                         class="header__logo">
                 </a>
@@ -22,7 +22,7 @@
                 <div class="header__social">
                 </div>
                 <nav class="header__nav">
-                    <a href="index.php?page=shop" class="header__nav-item">Видеооткрытка с фильмами 1934 - 1994 год</a>
+                    <a href="<?php echo get_permalink(103); ?>" class="header__nav-item">Видеооткрытка с фильмами 1934 - 1994 год</a>
                     <a href="#" class="header__nav-item">Видеооткрытка с фильмами к праздникам</a>
                     <a href="#" class="header__nav-item">Индивидуальный проект</a>
                     <a href="#" class="header__nav-item">Оптовым покупателям</a>
@@ -44,7 +44,7 @@
                     </ul>
                 <div class="header__login">
                 <?php if (is_user_logged_in()): ?>
-                    <a class="header_login-link" href="index.php?page=page-my-profile">Профиль</a>
+                    <a class="header_login-link" href="<?php echo get_permalink(83); ?>">Профиль</a>
                     <a class="header_login-link" href="<?php echo wp_logout_url(home_url()); ?>">Выход</a>
                 <?php else: ?>
                     <a href="#" class="header_login-link">У меня есть код. Смотреть онлайн</a>
