@@ -3,6 +3,9 @@
 Template Name: Шаблон страницы входа
 */
 ?>
+
+<?php get_header(); ?>
+
 <section class="section-login">
     <form class="login-form">
         <h2>Вход</h2>
@@ -68,3 +71,5 @@ Template Name: Шаблон страницы входа
 
 </section>
 </div>
+
+<?php get_footer(); ?>

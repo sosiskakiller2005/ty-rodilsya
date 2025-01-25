@@ -24,6 +24,8 @@ $args = [
 $products_query = new WP_Query($args);
 ?>
 
+<?php get_header(); ?>
+
 <article class="article-container">
     <div class="article-content">
         <div class="article-image">
@@ -89,3 +91,5 @@ $products_query = new WP_Query($args);
     </div>
 </article>
 </div>
+
+<?php get_footer(); ?>
