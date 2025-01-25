@@ -368,6 +368,7 @@ table td {
 .footer {
     background: linear-gradient(#00C000, #008400);
     padding: 35px;
+    margin-top: 80px;
 }
 
 .footer-container {
