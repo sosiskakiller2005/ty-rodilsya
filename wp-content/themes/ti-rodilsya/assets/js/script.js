@@ -35,3 +35,22 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.remove("active");
   })
 });
+
+
+// Активные кнопки в меню профиля
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('.profile-nav-link');
+
+  // Добавляем обработчики событий для каждой ссылки
+  links.forEach(link => {
+      link.addEventListener('click', function(event) {
+          event.preventDefault(); // Отменяем стандартное поведение ссылки
+
+          // Удаляем активный класс со всех ссылок
+          links.forEach(lnk => lnk.classList.remove('profile-nav-active'));
+          
+          // Добавляем активный класс к текущей ссылке
+          this.classList.add('profile-nav-active');
+      });
+  });
+});
