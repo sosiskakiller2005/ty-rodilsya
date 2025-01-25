@@ -93,8 +93,4 @@ $products_query = new WP_Query($args);
 </article>
 </div>
 
-<<<<<<< HEAD
 <?php get_footer(); ?>
-=======
-<?php get_footer(); ?>
->>>>>>> af99e4b1915e7031f6e4e2664e02aabf5991657f
