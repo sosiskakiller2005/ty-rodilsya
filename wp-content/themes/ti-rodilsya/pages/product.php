@@ -19,19 +19,27 @@ if (!$product) {
 }
 ?>
 
+<?php get_header(); ?>
+
 
 <section class="single-product">
-    <h3><?php echo esc_html($product->get_name()); ?></h3>
+    <h2><?php echo esc_html($product->get_name()); ?></h2>
     <div class="single-product-content">
         <img src="<?php echo esc_url(wp_get_attachment_url($product->get_image_id())); ?>" alt="">
-        <p>Описание <?php echo wpautop($product->get_description()); ?></p>
-    </div>
-    <div class="single-product-button">
-        <p><strong>Цена:</strong> <?php echo esc_html($product->get_price()); ?> руб.</p>
-        <a href="#" class="product-button">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>В корзину</span>
-        </a>
+        <div class="product-right">
+            <p>Описание <?php echo wpautop($product->get_description()); ?></p>
+            <div class="single-product-button">
+                <p><strong>Цена:</strong> <?php echo esc_html($product->get_price()); ?> руб.</p>
+                <form action="" method="post">
+                    <input type="hidden" name="add-to-cart" value="<?php echo esc_attr($product_id); ?>">
+                    <button type="submit" class="product-button">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>В корзину</span></button>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
 </div>
+
+<?php get_footer(); ?>

@@ -250,16 +250,40 @@ button:hover, .product-button:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .single-product-content {
     display: flex;
+    flex-direction: row;
     gap: 20px;
+    justify-content: center;
+}
+
+.single-product-content img {
+    height: 25em;
+}
+
+.product-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-right p {
+    text-wrap: wrap;
+    width: 25em;
 }
 
 .single-product-button {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 .section-login {
@@ -310,6 +334,30 @@ button:hover, .product-button:hover {
 
 .hint {
     font-size: 75%;
+}
+
+.cart-containter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-products {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
 }
 
 .footer {

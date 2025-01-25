@@ -13,7 +13,7 @@
     <div class="container">
         <header class="header">
             <div class="header__left">
-                <a href="<?php echo get_permalink(81); ?>">
+                <a href="<?php echo get_permalink(19); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Логотип"
                         class="header__logo">
                 </a>
@@ -22,7 +22,7 @@
                 <div class="header__social">
                 </div>
                 <nav class="header__nav">
-                    <a href="<?php echo get_permalink(103); ?>" class="header__nav-item">Видеооткрытка с фильмами 1934 - 1994 год</a>
+                    <a href="<?php echo get_permalink(74); ?>" class="header__nav-item">Видеооткрытка с фильмами 1934 - 1994 год</a>
                     <a href="#" class="header__nav-item">Видеооткрытка с фильмами к праздникам</a>
                     <a href="#" class="header__nav-item">Индивидуальный проект</a>
                     <a href="#" class="header__nav-item">Оптовым покупателям</a>
@@ -35,8 +35,8 @@
                     <button id="closeBtn">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
-                    <li><a href="#index.php?page=page-login">Личный кабинет (вход/регистрация)</a></li>
-                    <li><a href="#about">Видеооткрытка с фильмами 1934 - 1994 год</a></li>
+                    <li><a href="<?php echo get_permalink(12); ?>">Личный кабинет (вход/регистрация)</a></li>
+                    <li><a href="<?php echo get_permalink(74); ?>">Видеооткрытка с фильмами 1934 - 1994 год</a></li>
                     <li><a href="#services">Индивидуальный Проект</a></li>
                     <li><a href="#contact">Оптовым покупателям</a></li>
                     <li><a href="#contact">Корпоративным заказчикам</a></li>
@@ -44,12 +44,13 @@
                     </ul>
                 <div class="header__login">
                 <?php if (is_user_logged_in()): ?>
-                    <a class="header_login-link" href="<?php echo get_permalink(83); ?>">Профиль</a>
+                    <a class="header_login-link" href="<?php echo get_permalink(14); ?>">Профиль</a>
+                    <a class="header_login-link" href="<?php echo get_permalink(22); ?>">Корзина</a>
                     <a class="header_login-link" href="<?php echo wp_logout_url(home_url()); ?>">Выход</a>
                 <?php else: ?>
                     <a href="#" class="header_login-link">У меня есть код. Смотреть онлайн</a>
-                    <a href="index.php?page=page-registration" class="header_login-link">Регистрация покупателя</a>
-                    <a href="index.php?page=page-login" class="header_login-link">Вход</a>
+                    <a href="<?php echo get_permalink(8); ?>" class="header_login-link">Регистрация покупателя</a>
+                    <a href="<?php echo get_permalink(12); ?>" class="header_login-link">Вход</a>
                 <?php endif; ?>
                 </div>
             </div>
