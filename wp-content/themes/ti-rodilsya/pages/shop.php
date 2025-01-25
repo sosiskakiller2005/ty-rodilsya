@@ -77,7 +77,7 @@ $products_query = new WP_Query($args);
             </p>
             <div class="product-buttons">
                 <a class="product-button"
-                    href="<?php echo esc_url(get_permalink(get_page_by_path('product')) . '?id=' . $product_id); ?>">
+                    href="<?php echo esc_url(get_permalink(84) . '?id=' . $product_id); ?>">
                     Описание</a>
                 <a class="product-button" href="?add-to-cart=<?php echo $product_id; ?>">
                     <i class="fa-solid fa-cart-shopping"></i>
