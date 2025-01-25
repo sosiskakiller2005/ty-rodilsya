@@ -25,8 +25,8 @@
             <h3 class="footer-right-title">Контакты</h3>
             <div class="footer-right-content">
                 <div class="footer-right-contacts">
-                    <a class="contacts-phone" href="tel:89997776611">Телефон: 8 999 777 66 11</a>
-                    <a class="contacts-email" href="mailto:proekt.tr@gmail.com">Email: example@example.com</a>
+                    <a class="contacts-phone" href="tel:+79154380707">Телефон: +7 (915) 438-07-07</a>
+                    <a class="contacts-email" href="mailto:proekt.tr@gmail.com">Email: proekt.tr@gmail.com</a>
                 </div>
                 <div class="footer-right-socials">
                     <a class="footer-social-link" href="#">
