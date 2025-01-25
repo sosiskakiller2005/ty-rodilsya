@@ -11,7 +11,7 @@
  * License:     Лицензия. Пр: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Version:     1.0
+ * Version:     1.5
  */
 
 :root {
@@ -25,6 +25,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -51,6 +52,7 @@ body {
     background-color: var(--color-primary-brown);
     align-items: center;
 }
+
 .header__hamburger-btn:hover {
     background-color: var(--color-secondary-brown);
 }
@@ -125,15 +127,15 @@ input[type="password"]:focus {
     padding: 0;
     top: 0;
     right: 0;
-  }
+}
 
-  .header__hamburger-btn {
+.header__hamburger-btn {
     display: none;
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-  }
+}
 
 .header__login {
     display: flex;
@@ -231,7 +233,8 @@ input[type="password"]:focus {
     text-decoration: none;
 }
 
-button, .product-button {
+button,
+.product-button {
     background-color: var(--color-primary-brown);
     color: #fff;
     border: none;
@@ -242,7 +245,8 @@ button, .product-button {
     transition: background-color 0.3s;
 }
 
-button:hover, .product-button:hover {
+button:hover,
+.product-button:hover {
     background-color: var(--color-secondary-green);
 }
 
@@ -354,36 +358,126 @@ button:hover, .product-button:hover {
 }
 
 
-table th, table td {
+table th,
+table td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
     background: linear-gradient(#00C000, #008400);
+    padding: 35px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    position: relative;
+    min-width: 200px;
+}
+
+.footer-left-image {
+    position: absolute;
+    top: -90px;
+    left: 0;
+}
+
+.footer-center,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-center-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-center-title,
+.footer-right-title {
+    margin-bottom: 20px;
     color: white;
-    /* Задает цвет текста для контраста */
-    padding: 10px;
-    /* Внутренний отступ */
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.footer-item {
+.footer-center-content,
+.footer-right-content {
     display: flex;
     flex-direction: column;
-    gap: 1em;
-    padding: 15px;
+    justify-content: space-between;
+    height: 100%;
 }
 
-.footer-item-link {
-    color: var(--color-menu-text);
+.nav-left,
+.nav-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 75px;
+}
+
+.nav-link,
+.contacts-phone,
+.contacts-email,
+.footer-right-privacy {
+    color: white;
     text-decoration: none;
-    font-size: 70%;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-.copyright {
+.nav-link:hover,
+.contacts-phone:hover,
+.contacts-email:hover,
+.footer-right-privacy:hover {
+    text-decoration: underline;
+}
+
+.footer-right-contacts {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 10px;
+    height: 32px;
+    width: 32px;
+    font-size: 28px;
+    background-color: white;
+    color: #00C000;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.footer-social-link:last-child {
+    font-size: 22px;
+}
+
+.footer-social-link:hover {
+    color: var(--color-primary-brown);
+}
+
+.footer-copyright {
+    color: white;
+    font-size: 18px;
 }
