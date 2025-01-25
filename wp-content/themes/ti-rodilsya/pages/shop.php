@@ -16,13 +16,15 @@ $args = [
         [
             'taxonomy' => 'product_cat', // Таксономия WooCommerce для категорий товаров
             'field' => 'slug',          // Используем слаг категории
-            'terms' => 'videootkritka-80',   // Слаг категории (замените на свой)
+            'terms' => 'videootkrytki-o-80-h-godah',   // Слаг категории (замените на свой)
         ],
     ],
 ];
 
 $products_query = new WP_Query($args);
 ?>
+
+<?php get_header(); ?>
 
 <article class="article-container">
     <div class="article-content">
@@ -74,7 +76,8 @@ $products_query = new WP_Query($args);
                 <?php echo esc_html($product_price); ?> руб.
             </p>
             <div class="product-buttons">
-                <a class="product-button" href="<?php echo esc_url(get_permalink(get_page_by_path('product')) . '?id=' . $product_id); ?>">
+                <a class="product-button"
+                    href="<?php echo esc_url(get_permalink(get_page_by_path('product')) . '?id=' . $product_id); ?>">
                     Описание</a>
                 <a class="product-button" href="?add-to-cart=<?php echo $product_id; ?>">
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -89,3 +92,5 @@ $products_query = new WP_Query($args);
     </div>
 </article>
 </div>
+
+<?php get_footer(); ?>
