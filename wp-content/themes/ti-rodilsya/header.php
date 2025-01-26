@@ -22,7 +22,7 @@
                 <div class="header__social">
                 </div>
                 <nav class="header__nav">
-                    <a href="<?php echo get_permalink(74); ?>" class="header__nav-item">Видеооткрытка с фильмами 1934 - 1994 год</a>
+                    <a href="<?php echo get_permalink(122); ?>" class="header__nav-item">Видеооткрытка с фильмами 1934 - 1994 год</a>
                     <a href="#" class="header__nav-item">Видеооткрытка с фильмами к праздникам</a>
                     <a href="#" class="header__nav-item">Индивидуальный проект</a>
                     <a href="#" class="header__nav-item">Оптовым покупателям</a>
