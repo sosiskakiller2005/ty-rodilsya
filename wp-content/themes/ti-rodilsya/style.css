@@ -100,9 +100,16 @@ input[type="password"]:focus {
 
 .header__nav {
     display: flex;
-    align-items: stretch;
     gap: 5px;
-    background: var(--color-secondary-brown);
+    --background: #411F03;
+    --size: 7px;
+    
+    background:
+     conic-gradient(at 50% var(--size),var(--background) 75%,#0000 0)
+     0 0/calc(2*var(--size)) calc(100% - var(--size)) padding-box;
+  
+    border: var(--size) solid var(--background);
+    padding: 15px 0px;
 }
 
 .header__nav-item {
