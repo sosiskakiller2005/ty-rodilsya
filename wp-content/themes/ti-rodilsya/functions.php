@@ -34,11 +34,13 @@ function load_dynamic_page() {
                 break;
 
             case 'my-videos':
-                include get_template_directory() . '/profile/my-videos.php';
+                wp_redirect(get_permalink(100));
+                exit;
                 break;
 
             case 'edit-profile':
-                include get_template_directory() . '/profile/edit-profile.php';
+                wp_redirect(get_permalink(95));
+                exit;
                 break;
 
             default:
