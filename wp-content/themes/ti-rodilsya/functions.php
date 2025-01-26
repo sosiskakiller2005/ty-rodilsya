@@ -6,7 +6,6 @@ add_filter('the_content', 'do_shortcode');
 //Подключение динамического раздела
 add_action('wp_ajax_load_dynamic_page', 'load_dynamic_page');
 add_action('wp_ajax_nopriv_load_dynamic_page', 'load_dynamic_page');
-add_action('init', 'reset_user_capabilities');
 
 //Для проверки шорткода
 
@@ -30,15 +29,16 @@ function load_dynamic_page() {
         // В зависимости от переданного параметра подгружаем нужный шаблон
         switch ($page) {
             case 'my-orders':
-                include echo get_permalink(98);
+                wp_redirect(get_permalink(98));
+                exit;
                 break;
 
             case 'my-videos':
-                include get_template_directory() . '/parts/my-videos.php';
+                include get_template_directory() . '/profile/my-videos.php';
                 break;
 
             case 'edit-profile':
-                include get_template_directory() . '/parts/edit-profile.php';
+                include get_template_directory() . '/profile/edit-profile.php';
                 break;
 
             default:
@@ -74,4 +74,5 @@ function reset_user_capabilities() {
         $role->add_cap('delete_pages');
     }
 }
+add_action('init', 'reset_user_capabilities');
 ?>
