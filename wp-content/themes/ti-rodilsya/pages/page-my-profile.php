@@ -7,13 +7,13 @@ Template Name: Шаблон страницы профиля
 
 <section class="profile-section">
     <nav class="profile-nav">
-        <a class="profile-nav-link" href="#">Мои заказы</a>
+        <a class="profile-nav-link menu-link" href="#">Мои заказы</a>
         <span>></span>
-        <a class="profile-nav-link" href="#">Мои электронные открытки</a>
+        <a class="profile-nav-link menu-link" href="#">Мои электронные открытки</a>
         <span>></span>
-        <a class="profile-nav-link" href="#">Редактировать профиль</a>
+        <a class="profile-nav-link menu-link" href="#">Редактировать профиль</a>
     </nav>
-    <div class="profile-content">
+    <div class="profile-content" id="dynamic-content">
         
     </div>
 </section>
