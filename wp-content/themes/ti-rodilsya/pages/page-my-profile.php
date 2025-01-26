@@ -14,7 +14,7 @@ Template Name: Шаблон страницы профиля
         <a class="profile-nav-link" href="#">Редактировать профиль</a>
     </nav>
     <div class="profile-content">
-
+        
     </div>
 </section>
 
