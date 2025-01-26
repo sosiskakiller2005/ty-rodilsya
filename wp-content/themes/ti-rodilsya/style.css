@@ -409,6 +409,7 @@ table td {
 
 .profile-nav-link.profile-nav-active {
     border-bottom: 2px solid #F41B00;
+    font-weight: 700;
 }
 
 .profile-nav-link:hover {
