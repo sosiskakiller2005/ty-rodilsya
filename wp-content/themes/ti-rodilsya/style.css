@@ -388,6 +388,7 @@ table td {
     display: flex;
     align-items: center;
     gap: 30px;
+    margin-bottom: 40px;
 }
 
 .profile-nav-link {
@@ -407,6 +408,48 @@ table td {
 }
 
 /* КОНЕЦ СЕКЦИИ MY PROFILE */
+
+/* СТАРТ СЕКЦИИ MY PROFILE > MY ORDERS */
+
+ .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ .order-item {
+    display: flex;
+    gap: 20px;
+ }
+
+ .order-date, .order-number, .order-status {
+    font-size: 16px;
+    color: var(--color-secondary-brown);
+ }
+
+/* КОНЕЦ СЕКЦИИ MY PROFILE > MY ORDERS */
+
+/* СТАРТ СЕКЦИИ MY PROFILE > MY VIDEOS */
+
+.input-code {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-title {
+    color: var(--color-secondary-brown);
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.input-code-message {
+    color: #737373;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+/* КОНЕЦ СЕКЦИИ MY PROFILE > MY VIDEOS */
 
 /* СТАРТ СЕКЦИИ FOOTER */
 
