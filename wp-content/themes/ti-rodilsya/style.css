@@ -247,19 +247,23 @@ input[type="email"]:focus {
 
 button,
 .product-button {
-    background-color: var(--color-primary-brown);
+    background-color: #AE9481;
     color: #fff;
     border: none;
+    outline: 1px solid rgba(255, 255, 255, 0.7);
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: 0 8px 0px #745540;
     transition: background-color 0.3s;
 }
 
 button:hover,
 .product-button:hover {
-    background-color: var(--color-secondary-green);
+    transform: translateY(6px);
+    border-bottom-width: 2px;
+    box-shadow: none;
 }
 
 .single-product {
