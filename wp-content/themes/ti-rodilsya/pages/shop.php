@@ -29,7 +29,7 @@ $products_query = new WP_Query($args);
 <article class="article-container">
     <div class="article-content">
         <div class="article-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/text-fon.png" alt="Видеооткрытки 1934">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/80 COLOR LICO_.jpg" alt="Видеооткрытки 1980">
         </div>
         <div class="article-description">
             <h2>ВИДЕООТКРЫТКИ О 80-Х ГОДАХ</h2>
