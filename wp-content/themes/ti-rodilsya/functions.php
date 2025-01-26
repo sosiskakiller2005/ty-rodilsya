@@ -76,5 +76,85 @@ function reset_user_capabilities() {
         $role->add_cap('delete_pages');
     }
 }
+
+function add_video_link_meta_box() {
+    add_meta_box(
+        'video_link_meta_box',
+        'Видео для товара',
+        'render_video_link_meta_box',
+        'product',
+        'side'
+    );
+}
+add_action('add_meta_boxes', 'add_video_link_meta_box');
+
+function render_video_link_meta_box($post) {
+    $video_link = get_post_meta($post->ID, 'video_link', true);
+    ?>
+    <p>
+        <input type="text" id="video_link" name="video_link" value="<?php echo esc_attr($video_link); ?>" style="width: 100%;" placeholder="URL видео">
+    </p>
+    <p>
+        <button type="button" class="button upload-video-button">Выбрать видео</button>
+    </p>
+    <script>
+        jQuery(document).ready(function($) {
+            $('.upload-video-button').on('click', function(e) {
+                e.preventDefault();
+                var frame = wp.media({
+                    title: 'Выберите видео',
+                    button: {
+                        text: 'Выбрать'
+                    },
+                    library: {
+                        type: 'video'
+                    },
+                    multiple: false
+                });
+                frame.on('select', function() {
+                    var attachment = frame.state().get('selection').first().toJSON();
+                    $('#video_link').val(attachment.url);
+                });
+                frame.open();
+            });
+        });
+    </script>
+    <?php
+}
+
+function auto_assign_video_link_to_product($post_id, $post, $update) {
+    // Проверяем, что это товар
+    if ($post->post_type !== 'product') {
+        return;
+    }
+
+    // Проверяем, не это ли автосохранение
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    // Проверяем, есть ли права на редактирование
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    // Пример логики: просто устанавливаем пустое значение в meta, чтобы не было ошибки
+    update_post_meta($post_id, 'video_link', '');
+}
+
+function save_video_link_meta($post_id) {
+    if (isset($_POST['video_link'])) {
+        update_post_meta($post_id, 'video_link', sanitize_text_field($_POST['video_link']));
+    }
+}
+
+//Загрузка медиафайлов
+add_action('save_post', 'auto_assign_video_link_to_product', 10, 3);
+add_action('save_post', 'save_video_link_meta');
+
+add_action('init', function () {
+    load_textdomain('complianz-gdpr', WP_LANG_DIR . '/plugins/complianz-gdpr/complianz-gdpr-' . get_locale() . '.mo');
+    load_textdomain('complianz-terms-conditions', WP_LANG_DIR . '/plugins/complianz-terms-conditions/complianz-terms-conditions-' . get_locale() . '.mo');
+});
 add_action('init', 'reset_user_capabilities');
 ?>
