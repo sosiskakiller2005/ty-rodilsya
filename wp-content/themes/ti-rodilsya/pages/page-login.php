@@ -4,15 +4,6 @@ Template Name: Шаблон страницы входа
 */
 ?>
 
-<<<<<<< HEAD
-=======
-<?php
-if (is_user_logged_in()) {
-  wp_redirect(home_url()); // Перенаправление на главную, если пользователь уже авторизован
-  exit;
-}
-?>
->>>>>>> af99e4b1915e7031f6e4e2664e02aabf5991657f
 <?php get_header(); ?>
 
 <section class="section-login">

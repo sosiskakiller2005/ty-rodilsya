@@ -58,14 +58,18 @@ body {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="tel"],
+input[type="email"] {
     padding: 10px;
     font-size: 16px;
 
 }
 
 input[type="text"]:focus,
-input[type="password"]:focus {
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
     outline: 1px solid var(--color-secondary-brown);
 }
 
@@ -476,7 +480,9 @@ table td {
 }
 
 .video-cover {
-    max-width: 100px;
+    object-fit: contain;
+    width: 120px;
+    height: auto;
 }
 
 .video-content {
@@ -504,6 +510,46 @@ table td {
 }
 
 /* КОНЕЦ СЕКЦИИ MY PROFILE > MY VIDEOS */
+
+/* СТАРТ СЕКЦИИ MY PROFILE > EDIT */
+
+.edit-profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.input-group {
+    display: flex;
+    gap: 30px;
+}
+
+.input-group input {
+    width: 478px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.group-description {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 50%;
+}
+
+/* КОНЕЦ СЕКЦИИ MY PROFILE > EDIT */
 
 /* СТАРТ СЕКЦИИ FOOTER */
 
