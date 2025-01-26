@@ -431,19 +431,73 @@ table td {
 
 /* СТАРТ СЕКЦИИ MY PROFILE > MY VIDEOS */
 
+.videos-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .input-code {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.input-title {
+.input-title, .videos-list-title {
     color: var(--color-secondary-brown);
     font-size: 20px;
     line-height: 26px;
 }
 
 .input-code-message {
+    color: #737373;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.videos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.videos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video {
+    display: flex;
+    gap: 24px;
+    padding: 20px;
+    height: 195px;
+    border: 1px solid var(--color-secondary-brown);
+}
+
+.video-cover {
+    max-width: 100px;
+}
+
+.video-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.video-link {
+    font-size: 16px;
+    color: var(--color-secondary-brown);
+    line-height: 21px;
+}
+
+.last-added-video {
     color: #737373;
     font-size: 16px;
     line-height: 21px;
