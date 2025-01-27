@@ -8,8 +8,8 @@ Template Name: Шаблон раздела моих видеооткрыток
     <div class="input-code">
         <h3 class="input-title">У меня есть код на просмотр DVD-открытки</h3>
         <div class="input-block">
-            <input class="add-code-input" type="text" placeholder="Введите код">
-            <button class="add-code-button">Добавить</button>
+            <input class="add-code-input" id="codeInput" type="text" placeholder="Введите код">
+            <button class="add-code-button" id="addCodeButton">Добавить</button>
         </div>
         <p class="input-code-message">
             Если у вас есть DVD-открытка с кодом, введите его в данное поле

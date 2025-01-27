@@ -60,11 +60,12 @@ function upload_scripts() {
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/all.css' );
 	wp_enqueue_style( 'mediaquery', get_template_directory_uri() . '/assets/css/media.css' );
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/script.js');
-    //ajax
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/dynamic-content.js');
-    wp_enqueue_script('dynamic-content', get_template_directory_uri() . '/assets/js/dynamic-content.js', array('jquery'), null, true);
+	wp_enqueue_script( 'add_product_by_code_script', get_template_directory_uri() . '/assets/js/add-product-by-code-script.js');
+	wp_enqueue_script( 'dynamic_content_script', get_template_directory_uri() . '/assets/js/dynamic-content.js');
     // Передаём URL для AJAX-запросов
-    wp_localize_script('dynamic-content', 'ajaxurl', admin_url('admin-ajax.php'));
+    wp_localize_script('dynamic_content_script', 'ajax_object', array(
+        'ajaxurl' => admin_url('admin-ajax.php')
+    ));
 }
 
 function reset_user_capabilities() {
@@ -197,12 +198,55 @@ function assign_unique_code_to_product($post_id) {
 // Привязываем функцию к хуку создания нового товара
 add_action('woocommerce_new_product', 'assign_unique_code_to_product');
 
-// Также можно использовать общий хук сохранения постов, если нужно обработать все продукты
-add_action('save_post', 'assign_unique_code_to_product');
+// Обработчик для добавления товара по коду
+function add_product_by_code() {
+    // Проверяем, что это AJAX-запрос
+    if (!isset($_POST['code'])) {
+        wp_send_json_error(['message' => 'Код не указан.']);
+    }
 
-add_action('init', function () {
-    load_textdomain('complianz-gdpr', WP_LANG_DIR . '/plugins/complianz-gdpr/complianz-gdpr-' . get_locale() . '.mo');
-    load_textdomain('complianz-terms-conditions', WP_LANG_DIR . '/plugins/complianz-terms-conditions/complianz-terms-conditions-' . get_locale() . '.mo');
-});
+    $code = sanitize_text_field($_POST['code']);
+
+    // Ищем товар с указанным character_code
+    $args = [
+        'post_type' => 'product',
+        'posts_per_page' => 1,
+        'meta_query' => [
+            [
+                'key' => 'character_code', // Поле, где хранится код
+                'value' => $code,
+                'compare' => '=',
+            ],
+        ],
+    ];
+
+    $products = get_posts($args);
+
+    if (empty($products)) {
+        wp_send_json_error(['message' => 'Товар с таким кодом не найден.']);
+    }
+
+    $product_id = $products[0]->ID;
+
+    $order = wc_create_order();
+    if (is_wp_error($order)) {
+        wp_send_json_error(['message' => 'Ошибка при создании заказа.']);
+    }
+    $order->add_product(wc_get_product($product_id), 1);
+    $order->calculate_totals();
+    wp_send_json_success(['message' => 'Товар добавлен в заказ.']);
+}
+
+add_action('wp_ajax_add_product_by_code', 'add_product_by_code');
+add_action('wp_ajax_nopriv_add_product_by_code', 'add_product_by_code');
+
 add_action('init', 'reset_user_capabilities');
+add_action('plugins_loaded', function () {
+    if (!is_textdomain_loaded('complianz-gdpr')) {
+        load_plugin_textdomain('complianz-gdpr', false, WP_LANG_DIR . '/plugins/complianz-gdpr/');
+    }
+    if (!is_textdomain_loaded('complianz-terms-conditions')) {
+        load_plugin_textdomain('complianz-terms-conditions', false, WP_LANG_DIR . '/plugins/complianz-terms-conditions/');
+    }
+});
 ?>
