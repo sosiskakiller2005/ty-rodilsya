@@ -26,7 +26,7 @@ Template Name: Шаблон раздела моих видеооткрыток
             ));
 
             if (empty($customer_orders)) {
-                echo '<p>У вас пока нет покупок.</p>';
+                echo '<p>У вас нет добавленных открыток.</p>';
             } else {
                 foreach ($customer_orders as $order) {
                     foreach ($order->get_items() as $item_id => $item) {
