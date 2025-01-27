@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const page = this.dataset.page;
 
             // Отправляем AJAX-запрос
-            fetch(ajaxurl, {
+            fetch(ajax_object.ajaxurl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
