@@ -152,6 +152,54 @@ function save_video_link_meta($post_id) {
 add_action('save_post', 'auto_assign_video_link_to_product', 10, 3);
 add_action('save_post', 'save_video_link_meta');
 
+//Код для генерации уникальных ссылок на товары
+
+// Функция для генерации случайного уникального кода
+function generate_unique_code() {
+    $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    $code = '';
+
+    // Генерация первой части
+    for ($i = 0; $i < 6; $i++) {
+        $code .= $chars[rand(0, strlen($chars) - 1)];
+    }
+
+    $code .= '-';
+
+    // Генерация второй части
+    for ($i = 0; $i < 6; $i++) {
+        $code .= $chars[rand(0, strlen($chars) - 1)];
+    }
+
+    return $code;
+}
+
+// Функция для сохранения уникального кода новому товару
+function assign_unique_code_to_product($post_id) {
+    // Проверяем, что это тип поста "product" (WooCommerce)
+    if (get_post_type($post_id) !== 'product') {
+        return;
+    }
+
+    // Проверяем, чтобы код не перезаписывался для существующих товаров
+    $existing_code = get_post_meta($post_id, 'character_code', true);
+    if (!empty($existing_code)) {
+        return;
+    }
+
+    // Генерируем уникальный код
+    $unique_code = generate_unique_code();
+
+    // Сохраняем код в метаполе товара
+    update_post_meta($post_id, 'character_code', $unique_code);
+}
+
+// Привязываем функцию к хуку создания нового товара
+add_action('woocommerce_new_product', 'assign_unique_code_to_product');
+
+// Также можно использовать общий хук сохранения постов, если нужно обработать все продукты
+add_action('save_post', 'assign_unique_code_to_product');
+
 add_action('init', function () {
     load_textdomain('complianz-gdpr', WP_LANG_DIR . '/plugins/complianz-gdpr/complianz-gdpr-' . get_locale() . '.mo');
     load_textdomain('complianz-terms-conditions', WP_LANG_DIR . '/plugins/complianz-terms-conditions/complianz-terms-conditions-' . get_locale() . '.mo');
