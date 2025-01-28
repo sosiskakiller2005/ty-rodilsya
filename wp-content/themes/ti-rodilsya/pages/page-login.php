@@ -16,7 +16,7 @@ Template Name: Шаблон страницы входа
         <h2>Вход</h2>
         <p>Авторизуйтесь через социальные сети</p>
         <div class="login-socials">
-            <?php echo do_shortcode('[miniorange_social_login shape="square" theme="default" space="4" size="35"]'); ?>
+            <?php echo do_shortcode('[miniorange_social_login shape="roundededges" theme="default" space="5" size="45" heading=""]'); ?>
             <a class="social-link" href="#">
                 <i class="fa-brands fa-odnoklassniki-square"></i>
             </a>
