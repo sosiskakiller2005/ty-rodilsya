@@ -1,33 +1,32 @@
-document.body.addEventListener('click', function (event) {
-    if (event.target && event.target.id === 'addCodeButton') {
-    const code = document.getElementById('codeInput').value.trim();
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('add-code-button')) {
+    const code = document.querySelector('.add-code-input').value.trim();
 
     if (!code) {
         alert('Введите код!');
         return;
     }
 
-    const formData = new FormData();
-    formData.append('action', 'add_product_by_code');
+    let formData = new FormData();
+    formData.append('action', 'add_product_by_code'); // Важно! WordPress ждет этот параметр
     formData.append('code', code);
-    // Отправляем запрос на сервер
+
     fetch('/wp-admin/admin-ajax.php', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
         body: formData
     })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('Товар добавлен в заказ!');
-            } else {
-                alert(data.message || 'Ошибка при добавлении товара.');
-            }
-        })
-        .catch(error => {
-            console.error('Ошибка:', error);
-            alert('Произошла ошибка. Попробуйте снова.');
-        });
+    .then(response => response.json())
+    .then(data => {
+        console.log('Ответ сервера:', data);
+        if (data.success) {
+            alert('Товар добавлен в заказ!');
+            location.reload();
+        } else {
+            alert(data.message || 'Ошибка при добавлении товара.');
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Произошла ошибка. Попробуйте снова.');
+    });
 }});

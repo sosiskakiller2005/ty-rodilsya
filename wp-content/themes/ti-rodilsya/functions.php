@@ -200,41 +200,49 @@ add_action('woocommerce_new_product', 'assign_unique_code_to_product');
 
 // Обработчик для добавления товара по коду
 function add_product_by_code() {
-    // Проверяем, что это AJAX-запрос
-    if (!isset($_POST['code'])) {
+    // Проверяем, что код был передан
+    if (!isset($_POST['code']) || empty($_POST['code'])) {
         wp_send_json_error(['message' => 'Код не указан.']);
     }
 
     $code = sanitize_text_field($_POST['code']);
 
-    // Ищем товар с указанным character_code
-    $args = [
-        'post_type' => 'product',
-        'posts_per_page' => 1,
+    // Логирование запроса для отладки
+    error_log('Получен код: ' . $code);
+
+    // Проверяем, есть ли товар с таким кодом
+    $product_query = new WP_Query([
+        'post_type'  => 'product',
         'meta_query' => [
             [
-                'key' => 'character_code', // Поле, где хранится код
+                'key'   => 'character_code',
                 'value' => $code,
-                'compare' => '=',
-            ],
-        ],
-    ];
+                'compare' => '='
+            ]
+        ]
+    ]);
 
-    $products = get_posts($args);
-
-    if (empty($products)) {
+    if (!$product_query->have_posts()) {
         wp_send_json_error(['message' => 'Товар с таким кодом не найден.']);
     }
 
-    $product_id = $products[0]->ID;
+    $product = $product_query->posts[0]; // Получаем первый найденный товар
+    $product_id = $product->ID;
 
-    $order = wc_create_order();
-    if (is_wp_error($order)) {
-        wp_send_json_error(['message' => 'Ошибка при создании заказа.']);
+    // Получаем текущего пользователя
+    $user_id = get_current_user_id();
+    if (!$user_id) {
+        wp_send_json_error(['message' => 'Вы не авторизованы.']);
     }
+
+    // Создаем заказ через WooCommerce
+    $order = wc_create_order();
+    $order->set_customer_id($user_id);
     $order->add_product(wc_get_product($product_id), 1);
+    $order->set_status('completed'); // Меняем статус на "Обрабатывается"
     $order->calculate_totals();
-    wp_send_json_success(['message' => 'Товар добавлен в заказ.']);
+
+    wp_send_json_success(['message' => 'Заказ успешно создан!']);
 }
 
 add_action('wp_ajax_add_product_by_code', 'add_product_by_code');
