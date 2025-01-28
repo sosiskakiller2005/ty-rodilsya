@@ -240,6 +240,7 @@ function add_product_by_code() {
     $order->set_customer_id($user_id);
     $order->add_product(wc_get_product($product_id), 1);
     $order->set_status('completed'); // Меняем статус на "Обрабатывается"
+    $order->update_meta_data('order_source', 'Добавлен через ввод кода');
     $order->calculate_totals();
 
     wp_send_json_success(['message' => 'Заказ успешно создан!']);
