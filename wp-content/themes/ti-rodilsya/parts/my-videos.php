@@ -48,7 +48,6 @@ Template Name: Шаблон раздела моих видеооткрыток
                                         <?php endif; ?>
                                     </span>
                                 </div>
-                                <p class="last-added-video">Добавлено только что</p>
                             </div>
                         </article>
                         <?php
