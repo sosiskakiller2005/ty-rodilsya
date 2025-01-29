@@ -77,6 +77,8 @@ $cart = WC()->cart->get_cart();
 
         <button type="submit" name="update_cart" value="Обновить корзину">Обновить корзину</button>
         <a href="<?php echo esc_url(wc_get_checkout_url()); ?>">Перейти к оформлению</a>
+        <button type="submit" name="buy" value="Купить">Купить</button>
+        
     </form>
     <?php else: ?>
     <p>Ваша корзина пуста.</p>

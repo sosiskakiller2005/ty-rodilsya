@@ -60,6 +60,7 @@ function upload_scripts() {
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/all.css' );
 	wp_enqueue_style( 'mediaquery', get_template_directory_uri() . '/assets/css/media.css' );
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/script.js');
+	wp_enqueue_script( 'buy', get_template_directory_uri() . '/assets/js/buy.js');
 	wp_enqueue_script( 'add_product_by_code_script', get_template_directory_uri() . '/assets/js/add-product-by-code-script.js');
 	wp_enqueue_script( 'dynamic_content_script', get_template_directory_uri() . '/assets/js/dynamic-content.js');
     // Передаём URL для AJAX-запросов
@@ -248,6 +249,51 @@ function add_product_by_code() {
 
 add_action('wp_ajax_add_product_by_code', 'add_product_by_code');
 add_action('wp_ajax_nopriv_add_product_by_code', 'add_product_by_code');
+
+
+//отправка письма
+function send_email_action(){
+        $current_user = wp_get_current_user();
+        // Адрес получателя
+        $user_email = $current_user->user_email;
+        echo ($user_email);
+        // echo ($user_email);
+        
+        // Тема письма
+        $subject = 'Коды для виедооткрыток: ';
+        
+        // Содержимое письма
+        $message = 'Ваши коды: ';
+        
+        $cart_items = WC()->cart->get_cart();
+
+        if (!empty($cart_items)) {
+            foreach ($cart_items as $cart_item) {
+                $product_id = $cart_item['product_id'];
+                $character_code = get_post_meta($product_id, 'character_code', true);
+                $product_name = get_the_title($product_id);
+                $message .= "Товар: {$product_name} - Код: " . ($character_code ?: 'Нет кода') . " ";
+            }
+        } else {
+            $message .= "Ваша корзина пуста.\n";
+        }
+        
+        // Заголовки письма
+        $headers[] = 'From: Ты родился! <
+        info@xn--80aae4a1bi2b.ru
+        >';
+        
+        // Отправка письма
+        $result = wp_mail($user_email, $subject, $message, $headers);
+        
+        if ($result) {
+            echo 'Письмо успешно отправлено!';
+        } else {
+            echo 'Ошибка при отправке письма.';
+        }
+        wp_die();
+    }
+    add_action('wp_ajax_send_email_action', 'send_email_action');
 
 add_action('init', 'reset_user_capabilities');
 add_action('plugins_loaded', function () {
