@@ -36,7 +36,7 @@
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                     <li><a href="<?php echo get_permalink(12); ?>">Личный кабинет (вход/регистрация)</a></li>
-                    <li><a href="<?php echo get_permalink(74); ?>">Видеооткрытка с фильмами 1934 - 1994 год</a></li>
+                    <li><a href="<?php echo get_permalink(122); ?>">Видеооткрытка с фильмами 1934 - 1994 год</a></li>
                     <li><a href="#services">Индивидуальный Проект</a></li>
                     <li><a href="#contact">Оптовым покупателям</a></li>
                     <li><a href="#contact">Корпоративным заказчикам</a></li>
