@@ -106,8 +106,7 @@ header {
     color:var(--color-menu-text);
     text-transform: uppercase;
     text-decoration: none;
-    font-size: .9em;
-    font-weight: 400;
+    font: 400, .9em;
     padding: .5em;
 }
 
