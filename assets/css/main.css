@@ -28,6 +28,36 @@ a {
     font-weight: 700;
 }
 
+.green-button{
+    width: 17.8em;
+    padding: 6px 12px 6px 12px;
+    outline: 1px solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    box-shadow: 0 8px 0px var(--color-secondary-green);
+    transition: background-color 0.3s;
+    gap: 10px;
+    border-radius: 0.3em;
+    border-width: 0;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    background-color:var(--color-primary-green);
+}
+
+.green-button:hover{
+    outline: none;
+    cursor: none;
+    box-shadow:none;
+    transition: none;
+    top: -1em;
+}
+
+.button-container {
+    background-color: #DAD8CB;
+    padding: 0.3em 0.7em 1.1em 0.7em;
+    border-radius: 0.5em;
+    width: 19.3em;
+}
 /* секция HEADER */
 
 header {
@@ -163,6 +193,13 @@ header {
     justify-content: end;
     gap: 1em;
     margin-right: 7em;
+    margin-bottom: 0.5em;
+    color: var(--color-text);
+}
+
+.header-nav-link {
+    color: var(--color-text);
+
 }
 
 /* конец секции HEADER */
@@ -172,6 +209,12 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
 }
 
 /* Секция MAIN */
@@ -212,35 +255,61 @@ header {
     gap: 2em;
 }
 
-.button-container {
-    background-color: #DAD8CB;
-    padding: 0.3em 0.7em 1.1em 0.7em;
-    border-radius: 0.5em;
-    width: 19.3em;
+
+.cards-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.green-button{
-    width: 17.8em;
-    padding: 6px 12px 6px 12px;
-    outline: 1px solid rgba(255, 255, 255, 0.7);
-    cursor: pointer;
-    box-shadow: 0 8px 0px var(--color-secondary-green);
-    transition: background-color 0.3s;
-    gap: 10px;
-    border-radius: 0.3em;
-    border-width: 0;
-    color: white;
+.cards-info-header {
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.cards-info-header::after {
+    content: "";
+    display: block;
+    width: 50em;
+    height: 5px;
+    border-top: 5px double;
+    margin: 10px auto 0;
+}
+
+.cards-info-row {
+    margin: 0 auto;
+    display: flex;
+    width:75em;
+}
+
+.info-article {
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.info-list-item {
+    list-style-type: none;
+    display: flex;
+    color: var(--color-text);
+    font-weight: 400;
     font-size: 1.1em;
-    font-weight: 700;
-    background-color:var(--color-primary-green);
 }
 
-.green-button:hover{
-    outline: none;
-    cursor: none;
-    box-shadow:none;
-    transition: none;
-    top: -1em;
+.info-list-item::before {
+    content: "";
+    min-width: 1.3em;
+    min-height: 1.3em;
+    margin-right: 0.3em;
+    align-self: center;
+    background-image: url(../img/icons/TelevizKor.png);
+    background-attachment: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .graybutton{
