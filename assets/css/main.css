@@ -32,6 +32,7 @@ a {
 
 header {
     display: flex;
+    flex-direction: column;
     align-self: center;
     background:white;
     padding-left: .5em;
@@ -39,12 +40,29 @@ header {
     padding-bottom: .5em;
 }
 
+.header-container {
+    display: flex;
+}
+
+.header-banner {
+    background-color: #902250;
+    text-align: center;
+    padding: 0.4em;
+}
+
+.banner-text {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
 .logo {
     width: 22em;
     height: 12.1em;
 }
 
-.header-right {
+.container-right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -122,7 +140,7 @@ header {
     font-size: .9em;
     font-weight: 400;
     padding: 0.3em .6em;
-    margin-bottom: .6em;
+    margin-bottom: .8em;
 }
 
 .menu-button:hover{
@@ -137,7 +155,7 @@ header {
     text-decoration: none;
     text-transform: uppercase;
     margin-left: .9em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.7em;
 }
 
 .nav-links {
@@ -149,21 +167,81 @@ header {
 
 /* конец секции HEADER */
 
-.greenbutton{
-    padding: 6px 12px 6px 12px;
-    gap: 10px;
-    border-radius: 8px 0px 0px 0px;
-    opacity: 0px;
-    color:var(--color-primary-green);
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* .greenbutton:hover{
-    padding: 6px 12px 7px 12px;
+/* Секция MAIN */
+
+.slider {
+    display: flex;
+}
+
+.slider-button {
+    display: flex;
+    align-self: center;
+    width: 4.3em;
+    height: 4.3em;
+}
+
+.button-left {
+    /* position: absolute;
+    right:79em; */
+}
+
+
+.button-right {
+    /* position: absolute;
+    left:71em; */
+}
+
+.TV-section {
+    display: flex;
+    justify-content: center;
+    gap: 1.em;
+    width: 70em;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+
+.button-container {
+    background-color: #DAD8CB;
+    padding: 0.3em 0.7em 1.1em 0.7em;
+    border-radius: 0.5em;
+    width: 19.3em;
+}
+
+.green-button{
+    width: 17.8em;
+    padding: 6px 12px 6px 12px;
+    outline: 1px solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    box-shadow: 0 8px 0px var(--color-secondary-green);
+    transition: background-color 0.3s;
     gap: 10px;
-    border-radius: 8px 0px 0px 0px;
-    opacity: 0px;
-    color:var(--color-primary-green);
-} */
+    border-radius: 0.3em;
+    border-width: 0;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    background-color:var(--color-primary-green);
+}
+
+.green-button:hover{
+    outline: none;
+    cursor: none;
+    box-shadow:none;
+    transition: none;
+    top: -1em;
+}
 
 .graybutton{
     padding: 4px 10px 4px 10px;
