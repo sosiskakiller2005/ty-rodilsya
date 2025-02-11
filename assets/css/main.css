@@ -6,6 +6,7 @@
     --color-menu-text: #FEFBEC;
     --color-text: #632706;
     --color-grey-button:#AE9481;
+    --color-purple:#902250;
 }
 
 body {
@@ -24,12 +25,28 @@ h1, h2, h3, p, a {
     margin: 0;
 }
 
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+.centered {
+    text-align: center;
+}
+
 a {
     font-weight: 700;
 }
 
+h1 {
+    font-size: 1.6em;
+}
+
+.h2 {
+    font-size: 1.25em;
+}
+
 .green-button{
-    width: 17.8em;
+    width: 100%;
     padding: 6px 12px 6px 12px;
     outline: 1px solid rgba(255, 255, 255, 0.7);
     cursor: pointer;
@@ -41,10 +58,11 @@ a {
     color: white;
     font-size: 1.1em;
     font-weight: 700;
+    text-transform: uppercase;
     background-color:var(--color-primary-green);
 }
 
-.green-button:hover{
+.green-button:hover, .gray-button:hover{
     outline: none;
     cursor: none;
     box-shadow:none;
@@ -52,11 +70,33 @@ a {
     top: -1em;
 }
 
+.gray-button{
+    width: 100%;
+    padding: 6px 12px 6px 12px;
+    outline: 1px solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    box-shadow: 0 8px 0px var(--color-primary-brown);
+    transition: background-color 0.3s;
+    gap: 10px;
+    border-radius: 0.3em;
+    border-width: 0;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color:var(--color-grey-button);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .button-container {
+    display: flex;
+    gap: 0.6em;
     background-color: #DAD8CB;
     padding: 0.3em 0.7em 1.1em 0.7em;
     border-radius: 0.5em;
-    width: 19.3em;
+    width: atuo;
 }
 /* секция HEADER */
 
@@ -75,7 +115,7 @@ header {
 }
 
 .header-banner {
-    background-color: #902250;
+    background-color: var(--color-purple);
     text-align: center;
     padding: 0.4em;
 }
@@ -207,13 +247,15 @@ header {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-self: center;
+    max-width: 100em;
+    gap: 3em;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5em;
 }
 
@@ -255,6 +297,10 @@ main {
     gap: 2em;
 }
 
+#shop-button {
+    width: 19em;
+}
+
 
 .cards-info {
     display: flex;
@@ -263,7 +309,6 @@ main {
 }
 
 .cards-info-header {
-    text-align: center;
     position: relative;
     padding-bottom: 15px;
 }
@@ -284,6 +329,12 @@ main {
 }
 
 .info-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-article-row {
+    display: flex;
 }
 
 .info-list {
@@ -312,13 +363,85 @@ main {
     background-size: contain;
 }
 
-.graybutton{
-    padding: 4px 10px 4px 10px;
-    gap: 7px;
-    border-radius: 6px 0px 0px 0px;
-    border: 1px 0px 0px 0px;
-    opacity: 0px;
-    color:var(--color-grey-button);
+.cards-types {
+    display: flex;
+    gap: 7em;
+}
+
+.cards-type-article {
+    display: flex;
+    flex-direction: column;
+    max-width: 31em;
+    max-height: 37em;
+    align-self: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.gift-ideas {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-purple);
+    padding: 4em;
+    margin: 3em 0;
+    gap: 2em;
+}
+
+.gift-ideas-header {
+    position: relative;
+    padding-bottom: 15px;
+    color: white;
+}
+
+.gift-ideas-header::after {
+    content: "";
+    display: block;
+    width: 50em;
+    height: 5px;
+    border-top: 5px double;
+    margin: 10px auto 0;
+}
+
+.gift-ideas-text {
+    color: white;
+}
+
+.photo-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.3em;
+}
+
+.photo-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-categories {
+    display: flex;
+    align-items: center;
+    gap: 1.6em;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: 35em;
+    width: 23em;
+    padding-bottom: 1.3em;
+}
+
+.category-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1.3em;
+    gap: 1.25em;
+}
+
+#watch-video-btn {
+    width: 9em;
 }
 
 .support-button{
