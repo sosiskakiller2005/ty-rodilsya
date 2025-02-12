@@ -45,6 +45,11 @@ h1 {
     font-size: 1.25em;
 }
 
+.textarea {
+    resize: none; /* Отключаем изменение размеров */
+    height: 80px; /* Фиксированная высота для поля сообщения */
+}
+
 .green-button{
     width: 100%;
     padding: 6px 12px 6px 12px;
@@ -248,7 +253,7 @@ header {
     display: flex;
     flex-direction: column;
     align-self: center;
-    max-width: 100em;
+    margin: 0 24em;
     gap: 3em;
 }
 
@@ -420,6 +425,7 @@ main {
 
 .product-categories {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 1.6em;
 }
@@ -428,8 +434,8 @@ main {
     display: flex;
     flex-direction: column;
     background: white;
-    height: 35em;
-    width: 23em;
+    /* height: 35em;
+    width: 23em; */
     padding-bottom: 1.3em;
 }
 
@@ -444,15 +450,66 @@ main {
     width: 9em;
 }
 
+.shop-types {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+.shop-types-row {
+    display: flex;
+    gap: 9em;
+}
+
+.row-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#shop-type-button {
+    width: 100%;
+}
+
+.support-section {
+    display: flex;
+    background: white;
+    align-self: center;
+    gap: 1em;
+}
+
+.support-form {
+    display: flex;
+    padding: 2.3em;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.support-input {
+    color: var(--color-text);
+    width: 100%; /* Растягиваем на всю ширину родительского контейнера */
+    border: none; /* Убираем стандартную рамку */
+    border-bottom: 2px solid brown; /* Нижняя граница */
+    outline: none; /* Убираем обводку при фокусе */
+    font-size: 18px; /* Размер шрифта */
+    padding: 5px; /* Внутренний отступ */
+    background-color: transparent; /* Прозрачный фон */
+}
+
 .support-button{
     padding: 8px 20px 8px 20px;
     gap: 10px;
-    border-radius: 5.48px 0px 0px 0px;
-    border: 1.1px 0px 0px 0px;
     opacity: 0px;
+    border-radius: 5.5px;
+    border-width: 1px;
     background-color:white;
-    color:var(--color-text);
     border-color:var(--color-text);
+    color:var(--color-text);
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-top: 1em;
 }
 
 /* Секция FOOTER  */
