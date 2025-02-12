@@ -69,7 +69,6 @@ h1 {
 
 .green-button:hover, .gray-button:hover{
     outline: none;
-    cursor: none;
     box-shadow:none;
     transition: none;
     top: -1em;
@@ -102,6 +101,7 @@ h1 {
     padding: 0.3em 0.7em 1.1em 0.7em;
     border-radius: 0.5em;
     width: atuo;
+    width: auto;
 }
 /* секция HEADER */
 
