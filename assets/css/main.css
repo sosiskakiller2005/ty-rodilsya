@@ -261,7 +261,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5em;
+    gap: 3em;
 }
 
 /* Секция MAIN */
@@ -525,17 +525,27 @@ main {
 
 /* СЕКЦИЯ МАГАЗИНА ВИДЕООТКЫТОК */
 
-.years-videos {
+
+.shop-container {
+    display: flex;
+    flex-direction: column;
     position: relative;
     border-radius: 10px; /* Закругление краев */
     padding: 20px;
     width: 71em; /* Или адаптивная ширина */
     border: 2px solid var(--color-text); /* Тонкая коричневая граница */
-    align-items: center;
-    justify-content: center;
     justify-items: center;
-    align-self: center;
-    gap: 1em;
+    gap: 2em;
+}
+
+.years-videos {
+    display: flex;
+    background-color: #DAD8CB;
+    padding: 0.3em 0.7em 1.1em 0.7em;
+    border-radius: 0.5em;
+    width: auto;
+    margin-top: 1em;
+    justify-content: center;
 }
 
 .section-title {
@@ -547,23 +557,11 @@ main {
     font-weight: bold;
 }
 
-.years-container {
-    display: flex;
-    background-color: #DAD8CB;
-    padding: 0.3em 0.7em 1.1em 0.7em;
-    border-radius: 0.5em;
-    width: auto;
-    margin-top: 1em;
-}
-
 .years-search {
     gap: 0.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    justify-items: center;
-    align-self: center;
 }
 
 .years {
@@ -573,6 +571,34 @@ main {
     justify-content: center;
     justify-items: center;
     align-self: center;
+}
+
+.videos-decades {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    gap: 1.5em;
+}
+
+.decade-article {
+    display: flex;
+    gap: 1.5em;
+    background-color: white;
+    padding: 1em;
+}
+
+.decade-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.short-article-btn {
+    width: 20em;
+}
+
+.article-btn {
+    width: 10em;
 }
 
 /* КОНЕЦ СЕКЦИИ МАГАЗИНА ВИДЕООТКРЫТОК */
