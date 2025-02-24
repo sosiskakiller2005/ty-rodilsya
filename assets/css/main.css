@@ -293,6 +293,7 @@ main {
     justify-content: center;
     gap: 1.em;
     width: 70em;
+    margin-top: 1em;
 }
 
 .about-us {
@@ -524,7 +525,9 @@ main {
 }
 
 /* СЕКЦИЯ МАГАЗИНА ВИДЕООТКЫТОК */
-
+.green {
+    color: var(--color-primary-green);
+}
 
 .shop-container {
     display: flex;
@@ -551,10 +554,10 @@ main {
 .section-title {
     position: absolute;
     top: -0.5em; /* Поднимаем заголовок над контейнером */
-    left: 19em; /* Отступ слева */
     background: white; /* Чтобы заголовок не сливался с границей */
     padding: 0 10px;
     font-weight: bold;
+    align-self: center;
 }
 
 .years-search {
@@ -599,6 +602,26 @@ main {
 
 .article-btn {
     width: 10em;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    text-align: center;
+}
+
+.contact-info-whatsup::before {
+    content: "";
+    display: block;
+    width: 1.3em;
+    height: 1.3em;
+    margin-right: 0.3em;
+    align-self: center;
+    background-image: url(../img/icons/WatZel.png);
+    background-attachment: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /* КОНЕЦ СЕКЦИИ МАГАЗИНА ВИДЕООТКРЫТОК */
