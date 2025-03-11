@@ -18,6 +18,10 @@ body {
     color: #333;
     flex-direction: column;
     justify-content: space-between;
+    background-position: center;
+    background: url(../img/pictures/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1, h2, h3, p, a {
