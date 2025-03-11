@@ -45,8 +45,12 @@ h1 {
     font-size: 1.6em;
 }
 
-.h2 {
+h2 {
     font-size: 1.25em;
+}
+
+.short {
+    width: 1em;
 }
 
 .textarea {
@@ -629,6 +633,16 @@ main {
 }
 
 /* КОНЕЦ СЕКЦИИ МАГАЗИНА ВИДЕООТКРЫТОК */
+
+/* СЕКЦИЯ СТРАНИЦЫ АВТОРИЗАЦИИ */
+.login-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 1em;
+}
+/* КОНЕЦ СЕКЦИИ АВТОРИЗАЦИИ */
 
 /* Секция FOOTER  */
 footer {
