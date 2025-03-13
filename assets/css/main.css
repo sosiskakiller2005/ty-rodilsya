@@ -29,7 +29,7 @@ body {
     margin: 0;
 }
 
-a {
+a, h1, h2, h3, p{
     color: var(--color-text);
 }
 
@@ -173,6 +173,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: end;
+    gap: 0.5em;
 }
 
 .header__contact-info::before {
@@ -180,7 +181,6 @@ header {
     display: block;
     width: 1.3em;
     height: 1.3em;
-    margin-right: 0.3em;
     align-self: center;
     background-image: url(../img/pictures/phone.svg);
     background-attachment: contain;
@@ -203,7 +203,9 @@ header {
 }
 
 .header__socials {
+    display: flex;
     margin-right: 7em;
+    gap: 0.5em;
 }
 
 .header__social-link {
@@ -280,7 +282,7 @@ header {
     align-items: stretch;
 }
 
-.main {
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -564,21 +566,20 @@ header {
     padding: 0.3em 0.7em 1.1em 0.7em;
     border-radius: 0.5em;
     width: auto;
-    margin-top: 1em;
+    margin-top: 2em;
     justify-content: center;
 }
 
 .section-title {
     position: absolute;
-    top: -0.5em;
+    top: -2em;
     background: white;
-    padding: 0 10px;
+    padding: 0 12px;
     font-weight: bold;
     align-self: center;
 }
 
 .years-search {
-    gap: 0.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -609,7 +610,7 @@ header {
 .decade-info {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    justify-content: space-between;
 }
 
 .short-article-btn {
