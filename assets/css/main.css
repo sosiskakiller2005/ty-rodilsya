@@ -1,3 +1,9 @@
+ /* Desktop: 1200px > */
+/* Планшет (гор.): 960px-1200px > */
+/* Планшет (верт.): 640-960px > */
+/* Телефон (гор.): 480-640px > */
+/* Телефон (верт.): 320-480px > */
+
 :root {
     --color-primary-green: #00CF00;
     --color-secondary-green: #009500;
@@ -158,7 +164,6 @@ header {
 .header__banner {
     background-color: var(--color-purple);
     text-align: center;
-    padding: 0.4em;
 }
 
 .header__banner-text {
@@ -344,10 +349,6 @@ main {
     gap: 2em;
 }
 
-#shop-button {
-    width: 19em;
-}
-
 .cards-info {
     display: flex;
     flex-direction: column;
@@ -378,10 +379,6 @@ main {
 .info-article {
     display: flex;
     flex-direction: column;
-}
-
-#second-article {
-    /* margin-top: 2em; */
     justify-content: center;
 }
 
@@ -418,7 +415,6 @@ main {
 .cards-types {
     display: flex;
     gap: 7em;
-    flex-direction: row;
     margin-bottom: 1em;
 }
 
@@ -427,9 +423,8 @@ main {
     flex-direction: column;
     width: 31em;
     height: 40em;
-    align-self: center;
-    align-items: center;
     gap: 2em;
+    justify-content: space-around;
 }
 
 .article__img {
@@ -490,14 +485,19 @@ main {
     flex-direction: column;
     background: white;
     padding-bottom: 1.3em;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 47em;
+    height: 38em;
 }
 
 .category__img {
     width: 35em;
     height: 25em;
+}
+
+.gifts-store__img {
+    width: 24em;
+    height: 21em;
 }
 
 .category__info {
@@ -541,9 +541,7 @@ main {
     height: 21em;
 }
 
-#watch-video-btn {
-    width: 9em;
-}
+
 
 .shop-types {
     display: flex;
@@ -565,10 +563,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#shop-type-button {
-    width: 100%;
 }
 
 .support-section {
@@ -680,6 +674,7 @@ main {
     gap: 1.5em;
     background-color: white;
     padding: 1em;
+    justify-content: space-around;
 }
 
 .corporate-article {
@@ -719,18 +714,30 @@ main {
     flex-direction: column;
     gap: 0.5em;
     text-align: center;
+    align-items: center;
+}
+
+.author-info img {
+    width: 13em;
+    height: 16em;
 }
 
 .author-contact-info {
     display: flex;
     text-align: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 .author-quote {
     display: flex;
     flex-direction: column;
     width: 30em;
+    justify-content: space-around;
+}
+
+.author-quote p {
+    text-align: left;
 }
 
 .contact-info-whatsup {
