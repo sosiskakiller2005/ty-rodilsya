@@ -487,7 +487,7 @@ main {
     padding-bottom: 1.3em;
     justify-content: space-between;
     align-items: center;
-    height: 38em;
+    height: 40em;
 }
 
 .category__img {
@@ -764,7 +764,7 @@ main {
     align-self: center;
  }
 
-.contact-info__email ::before {
+.contact-info__email::before {
     content: "";
     display: block;
     width: 2em;
