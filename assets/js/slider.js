@@ -6,20 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
   
     let currentIndex = 0;
   
-    // Функция для отображения текущего слайда
     function showSlide(index) {
       slides.forEach((slide, i) => {
         slide.style.display = i === index ? 'block' : 'none';
       });
       
-      // Обновляем активные пункты пагинации
       paginationItems.forEach(item => item.classList.remove('active'));
       paginationItems[index].classList.add('active');
     }
   
-    // Событие клика на стрелке влево
     prevButton.addEventListener('click', event => {
-        event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+        event.preventDefault(); 
         if (currentIndex > 0) {
           currentIndex--;
         } else {
@@ -28,9 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentIndex);
       });
       
-      // Событие клика на стрелке вправо
       nextButton.addEventListener('click', event => {
-        event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+        event.preventDefault();
         if (currentIndex < slides.length - 1) {
           currentIndex++;
         } else {
@@ -42,12 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // События кликов на пунктах пагинации
     paginationItems.forEach((item, index) => {
         item.addEventListener('click', event => {
-          event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+          event.preventDefault();
           currentIndex = index;
           showSlide(currentIndex);
         });
       });
   
-    // Изначально показываем первый слайд
     showSlide(0);
   });

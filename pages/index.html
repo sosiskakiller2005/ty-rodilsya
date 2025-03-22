@@ -60,15 +60,43 @@
     </header>
 
     <main class="main">
-      <div class="slider">
-        <a class="slider__button slider__button--left" href="">
-          <img src="../assets/img/icons/arrow-left.png" alt="">
-        </a>
-        <img src="../assets/img/pictures/banner.png" alt="">
-        <a class="slider__button slider__button--right" href="">
-          <img src="../assets/img/icons/arrow-right.png" alt="">
-        </a>
-      </div>
+      <section class="slider-section">
+        <!-- Основной блок слайдера -->
+        <div class="slider">
+          <!-- Слайды -->
+          <div class="slides">
+            <img src="/assets/img/slider/s5.jpg" alt="Слайд №1">
+            <img src="/assets/img/slider/s6.jpg" alt="Слайд №2">
+            <img src="/assets/img/slider/s2.jpg" alt="Слайд №3">
+            <img src="/assets/img/slider/s3.jpg" alt="Слайд №4">
+            <img src="/assets/img/slider/promo2.jpg" alt="Слайд №5">
+          </div>
+
+          <div class="tape__left-top"></div>
+          <div class="tape__right-top"></div>
+          <div class="tape__right-bottom"></div>
+          <div class="tape__left-bottom"></div>
+        </div>
+
+        <!-- Кнопки навигации -->
+        <div class="slider-controls">
+          <a class="slider__button slider__button--left" href="#">
+            <img src="/assets/img/slider/arrow-left.png" alt="Влево">
+          </a>
+          <a class="slider__button slider__button--right" href="#">
+            <img src="/assets/img/slider/arrow-right.png" alt="Вправо">
+          </a>
+        </div>
+
+        <!-- Пагинация -->
+        <ul class="pagination">
+          <li><a href="#" data-slide-index="0"></a></li>
+          <li><a href="#" data-slide-index="1"></a></li>
+          <li><a href="#" data-slide-index="2"></a></li>
+          <li><a href="#" data-slide-index="3"></a></li>
+          <li><a href="#" data-slide-index="4"></a></li>
+        </ul>
+      </section>
 
       <section class="tv-section">
         <img src="../assets/img/pictures/Televizor.png" alt="">
@@ -356,6 +384,7 @@
       </div>
   </footer>
   <script src="../assets/js/script.js" defer></script>
+  <script src="../assets/js/slider.js" defer></script>
 </body>
 
 </html>
