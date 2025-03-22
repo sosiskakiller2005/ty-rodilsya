@@ -113,6 +113,7 @@ h1, h2, h3 {
 }
 
 .button--gray {
+    height: 100%;
     width: 100%;
     padding: 6px 12px;
     outline: 1px solid rgba(255, 255, 255, 0.7);
@@ -145,6 +146,10 @@ h1, h2, h3 {
 .divider {
     border: 1px solid var(--color-text); width: 100%;
     margin-top: 2em;
+}
+
+.hidden{
+    display: none;
 }
 
 /* секция HEADER */
@@ -669,6 +674,11 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .decade-article {
