@@ -105,6 +105,7 @@
      font-weight: 700;
      text-transform: uppercase;
      background-color: var(--color-primary-green);
+     text-transform: uppercase;
  }
 
  .button--green:hover,
@@ -143,7 +144,6 @@
      padding: 0.3em 0.7em 1.1em;
      border-radius: 0.5em;
      justify-content: center;
-     /* Центрируем содержимое */
      align-items: center;
  }
 
@@ -330,10 +330,10 @@
 
  /* Секция MAIN */
 
-.slider-section {
-    position: relative;
-    margin-top: 20px;
-}
+ .slider-section {
+     position: relative;
+     margin-top: 20px;
+ }
 
  .slider {
      position: relative;
@@ -379,8 +379,8 @@
  }
 
  .slider__button--right {
-    position: absolute;
-    right: -55px;
+     position: absolute;
+     right: -55px;
  }
 
  .slider__button {
@@ -394,39 +394,39 @@
  }
 
  .tape__left-top {
-    position: absolute;
-    background-image: url('/assets/img/slider/tape-1.png');
-    width: 109px;
-    height: 81px;
-    top:-15px;
-    left: -15px;
+     position: absolute;
+     background-image: url('/assets/img/slider/tape-1.png');
+     width: 109px;
+     height: 81px;
+     top: -15px;
+     left: -15px;
  }
 
  .tape__right-top {
-    position: absolute;
-    background-image: url('/assets/img/slider/tape-2.png');
-    width: 109px;
-    height: 81px;
-    top:-15px;
-    right: -15px;
+     position: absolute;
+     background-image: url('/assets/img/slider/tape-2.png');
+     width: 109px;
+     height: 81px;
+     top: -15px;
+     right: -15px;
  }
 
  .tape__right-bottom {
-    position: absolute;
-    background-image: url('/assets/img/slider/tape-1.png');
-    width: 109px;
-    height: 81px;
-    bottom:-15px;
-    right: -15px;
+     position: absolute;
+     background-image: url('/assets/img/slider/tape-1.png');
+     width: 109px;
+     height: 81px;
+     bottom: -15px;
+     right: -15px;
  }
 
  .tape__left-bottom {
-    position: absolute;
-    background-image: url('/assets/img/slider/tape-2.png');
-    width: 109px;
-    height: 81px;
-    bottom:-15px;
-    left: -15px;
+     position: absolute;
+     background-image: url('/assets/img/slider/tape-2.png');
+     width: 109px;
+     height: 81px;
+     bottom: -15px;
+     left: -15px;
  }
 
  .pagination {
@@ -461,11 +461,65 @@
      margin-top: 1em;
  }
 
+ .tv {
+    position: relative;
+ }
+
+.tv-video {
+    position: absolute;
+    top:39px;
+    left: 87px;
+}
+
+.tv-video video {
+    width: 268px;
+    height: 220px;
+    object-fit: cover;
+}
+
+ .tv-switcher {
+    position: absolute;
+    right: 63px;
+    bottom: 163px;
+    cursor: pointer;
+ }
+
+ .rotated {
+    transform: rotate(90deg);
+    bottom: 167px;
+    right: 66px;
+ }
+
  .about-us {
      display: flex;
      flex-direction: column;
      justify-content: center;
      gap: 2em;
+ }
+
+ .about-us__title {
+     font-weight: 700;
+     font-size: 1.1em;
+     line-height: 115%;
+     margin: 0;
+ }
+
+ .about-us__description {
+     font-weight: 400;
+     font-size: 1.1em;
+     line-height: 131%;
+     text-align: left;
+ }
+
+ .about-us__readmore {
+     font-weight: 700;
+     font-size: 18px;
+     line-height: 115%;
+     text-decoration: none;
+ }
+
+ .about-us__readmore:hover {
+     text-decoration: underline;
  }
 
  .cards-info {

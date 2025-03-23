@@ -99,12 +99,22 @@
       </section>
 
       <section class="tv-section">
-        <img src="../assets/img/pictures/Televizor.png" alt="">
+
+        <div class="tv">
+          <img src="../assets/img/pictures/tv.png" alt="TV">
+          <img class="tv-switcher" src="../assets/img/pictures/tv-switcher.png" alt="Переключатель">
+          <div class="tv-video">
+            <!-- Добавить постер -->
+            <video id="tv-video" preload="auto" loop>
+              <source src="https://woolyss.com/f/av1-opus-sita.webm">
+           </video>
+          </div>
+        </div>
         <article class="about-us">
-          <h3>
+          <h3 class="about-us__title">
             Наша компания создала несколько направлений подарочных видеооткрыток на каждый год, с 1934 и по 1994.
           </h3>
-          <p>
+          <p class="about-us__description">
             Наши фильмы перенесут Вас в прошлое - в год Вашего рождения. Уникальные кадры кинохроники оживят
             воспоминания о великих
             событиях и достижениях нашей страны и мира. Вы увидите людей, о которых говорили в новостях, узнаете о
@@ -113,9 +123,9 @@
             которые были на слуху именно
             в год вашего рождения, погрузитесь в ностальгическую атмосферу того времени.
           </p>
-          <a href="">"Читать далее"</a>
+          <a class="about-us__readmore" href="#">Читать далее »»</a>
           <div class="button-container" id="shop-button">
-            <button class="button--gray">УНИВЕРМАГ ПОДАРКОВ</button>
+            <button class="button--gray">Универмаг подарков</button>
           </div>
         </article>
       </section>
@@ -385,6 +395,7 @@
   </footer>
   <script src="../assets/js/script.js" defer></script>
   <script src="../assets/js/slider.js" defer></script>
+  <script src="../assets/js/tv-switcher.js" defer></script>
 </body>
 
 </html>
