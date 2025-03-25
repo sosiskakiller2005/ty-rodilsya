@@ -127,6 +127,10 @@ p {
   transform: translateY(0.5em);
 }
 
+.button--gray:hover {
+  background-color: var(--color-primary-green);
+}
+
 .button--gray {
   height: 100%;
   width: 100%;
