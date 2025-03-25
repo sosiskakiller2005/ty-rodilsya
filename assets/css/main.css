@@ -15,6 +15,11 @@
   --color-purple: #902250;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   font-family: Arial, sans-serif;
@@ -158,15 +163,15 @@ p {
 }
 
 .banner {
-    background-color: var(--color-primary-green);
-    color: white;
-    width: 95%;
-    text-align: center;
-    font-size: 1.9em;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 17px 0;
-    border-radius: 13px;
+  background-color: var(--color-primary-green);
+  color: white;
+  width: 95%;
+  text-align: center;
+  font-size: 1.9em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 17px 0;
+  border-radius: 13px;
 }
 
 .hidden {
@@ -194,15 +199,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
   background-color: var(--color-purple);
 }
 
 .header__banner-text {
   color: white;
   text-transform: uppercase;
-  font-size: 1.625em;
+  font-size: 1.5em;
   font-weight: 700;
-  line-height: 0.52em;
+  line-height: 100%;
 }
 
 .header__logo {
@@ -547,7 +553,7 @@ main {
 
 .cards-info__header {
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 
 .cards-info__header::after {
@@ -560,8 +566,18 @@ main {
 }
 
 .cards-info__row {
-  margin: 0 auto;
   display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 75em;
+  max-height: 31em;
+}
+
+.cards-info__row-reversed {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 0 auto;
   width: 75em;
   max-height: 31em;
 }
@@ -569,31 +585,53 @@ main {
 .info-article {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.info-article__title {
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 131%;
+  text-transform: uppercase;
+  margin-bottom: 1.875em;
 }
 
 .info-article__row {
   display: flex;
 }
 
+.cards-info__row-reversed .info-article {
+  margin-top: 49px;
+  max-width: 21.875em;
+}
+
+.info-article__row-reversed {
+  display: flex;
+  gap: 3.125em;
+}
+
 .info-list {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1.25em;
+  max-width: 32em;
 }
 
 .info-list__item {
-  list-style-type: none;
   display: flex;
+  align-items: center;
+  gap: 20px;
   color: var(--color-text);
   font-weight: 400;
   font-size: 1.1em;
+  list-style-type: none;
 }
 
 .info-list__item::before {
   content: "";
-  min-width: 1.3em;
-  min-height: 1.3em;
+  min-width: 2em;
+  min-height: 1.8em;
   margin-right: 0.3em;
   align-self: center;
   background-image: url(../img/icons/TelevizKor.png);
