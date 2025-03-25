@@ -701,8 +701,9 @@ main {
   display: block;
   width: 50em;
   height: 5px;
-  border-top: 5px double;
-  margin: 10px auto 0;
+  border-top: 3px solid;
+  border-bottom: 1px solid;
+  margin: 16px auto 0;
 }
 
 .gift-ideas__text {
