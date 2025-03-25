@@ -560,8 +560,9 @@ main {
   content: "";
   display: block;
   width: 50em;
-  height: 5px;
-  border-top: 5px double;
+  height: 4px;
+  border-top: 3px solid;
+  border-bottom: 1px solid;
   margin: 10px auto 0;
 }
 
