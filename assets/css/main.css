@@ -561,9 +561,9 @@ main {
   display: block;
   width: 50em;
   height: 4px;
-  border-top: 6px solid;
+  border-top: 3px solid;
   border-bottom: 2px solid;
-  margin: 10px auto 0;
+  margin: 16px auto 0;
 }
 
 .cards-info__row {
