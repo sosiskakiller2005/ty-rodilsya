@@ -114,7 +114,6 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   background-color: var(--color-primary-green);
-  width: 100%;
 }
 
 .button--green:hover,
@@ -604,6 +603,7 @@ main {
 .cards-info__row-reversed .info-article {
   margin-top: 49px;
   max-width: 21.875em;
+  padding-right: 5em;
 }
 
 .info-article__row-reversed {
@@ -650,15 +650,35 @@ main {
 .cards-type__article {
   display: flex;
   flex-direction: column;
-  width: 31em;
+  width: 31.813em;
   height: 40em;
   gap: 1em;
   justify-content: space-between;
+  align-items: center;
 }
 
 .article__img {
   width: 31em;
   height: 20em;
+}
+
+.cards-type__article-title {
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 131%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cards-type__article-description {
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 131%;
+  text-align: center;
+}
+
+#button-container-centered {
+  padding: 0px 26.5px;
 }
 
 .gift-ideas {
