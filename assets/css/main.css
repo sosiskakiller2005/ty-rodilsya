@@ -342,7 +342,7 @@ header {
 /* конец секции HEADER */
 
 .container {
-  max-width: 1150px;
+  max-width: 71,875em;
   margin: 0 auto;
 }
 
@@ -692,6 +692,55 @@ main {
   padding: 4em;
   margin: 3em 0;
   gap: 2em;
+}
+
+.gift-ideas__carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.carousel__track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  gap: 1em;
+}
+
+.carousel__slide {
+  min-width: calc(50% - 0.5em);
+  flex-shrink: 0;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  z-index: 10;
+}
+
+.carousel__button--left {
+  left: 10px;
+}
+
+.carousel__button--right {
+  right: 10px;
 }
 
 .gift-ideas__header {
