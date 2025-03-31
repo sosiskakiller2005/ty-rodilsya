@@ -790,8 +790,7 @@ main {
 .product-categories {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 1.6em;
+  gap: 26px;
   align-self: center;
   margin-bottom: 50px;
 }
@@ -799,22 +798,37 @@ main {
 .category {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background: white;
-  height: 100%;
+  box-shadow: 4px 4px 10px 0px #B49F9080;
 }
 
 .category-promo__image {
-  width: 322px;
+  width: 100%;
   height: 210px;
+  object-fit: cover;
 }
 
 .category-promo {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
   padding: 22px;
   background-color: #AD937F;
+}
+
+.category-promo.purple {
+  background-color: #8E2694;
+}
+
+.category-promo.wine {
+  background-color: #902250;
+}
+
+.category-promo.purple .category-promo__image,
+.category-promo.wine .category-promo__image {
+  height: 253px;
+  width: 504px;
 }
 
 .category-promo__title {
@@ -878,7 +892,12 @@ main {
   gap: 3em;
 }
 
-.shop-types h3 {
+.shop-types h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 131%;
+  letter-spacing: 0%;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -893,16 +912,39 @@ main {
   align-items: center;
 }
 
+.row-type a {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 130%;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+}
+
 .support-section {
-  display: flex;
-  background: white;
-  align-self: center;
-  gap: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 40px;
+  grid-template-areas:
+    "form image";
+  background-color: white;
+  margin-top: 40px;
+  padding: 38px;
+}
+
+.support-form {
+  grid-area: form;
+  align-items: flex-start;
+}
+
+.support-image {
+  grid-area: image;
 }
 
 .support-form {
   display: flex;
-  padding: 2.3em;
   flex-direction: column;
   justify-content: center;
   gap: 0.5em;
@@ -912,17 +954,20 @@ main {
   color: var(--color-text);
   width: 100%;
   border: none;
-  border-bottom: 2px solid brown;
+  border-bottom: 2px solid var(--color-text);;
   outline: none;
   font-size: 18px;
   padding: 5px;
   background-color: transparent;
 }
 
+.support-input::placeholder {
+  color: var(--color-text);
+}
+
 .support-button {
   padding: 8px 20px;
   gap: 10px;
-  opacity: 0;
   border-radius: 5.5px;
   border-width: 1px;
   background-color: white;
@@ -931,6 +976,13 @@ main {
   font-size: 1.1em;
   font-weight: 400;
   margin-top: 1em;
+  transition: all 0.3s ease;
+}
+
+.support-button:hover {
+  cursor: pointer;
+  background-color: var(--color-text);
+  color: white;
 }
 
 /* СЕКЦИЯ МАГАЗИНА ВИДЕООТКРЫТОК */
@@ -1033,10 +1085,6 @@ main {
 
 .decade-info p {
   text-align: left;
-}
-
-.short-article-btn {
-  width: 20em;
 }
 
 .article-btn {
