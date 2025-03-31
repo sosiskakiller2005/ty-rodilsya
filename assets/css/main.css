@@ -169,15 +169,17 @@ p {
 }
 
 .banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--color-primary-green);
   color: white;
-  width: 95%;
-  text-align: center;
   font-size: 1.9em;
   text-transform: uppercase;
   font-weight: 700;
   padding: 17px 0;
   border-radius: 13px;
+  margin-bottom: 50px;
 }
 
 .hidden {
@@ -195,6 +197,7 @@ header {
   padding-right: 0.3em;
   padding-bottom: 0.3em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 3em;
 }
 
 .header__container {
@@ -342,7 +345,7 @@ header {
 /* конец секции HEADER */
 
 .container {
-  max-width: 71,875em;
+  max-width: 71.875em;
   margin: 0 auto;
 }
 
@@ -350,14 +353,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3em;
 }
 
 /* Секция MAIN */
 
 .slider-section {
   position: relative;
-  margin-top: 20px;
+  margin-bottom: 2.5em;
 }
 
 .slider {
@@ -483,7 +485,7 @@ main {
   justify-content: center;
   gap: 1em;
   width: 70em;
-  margin-top: 1em;
+  margin-bottom: 4.25em;
 }
 
 .tv {
@@ -745,8 +747,12 @@ main {
 
 .gift-ideas__header {
   position: relative;
-  padding-bottom: 15px;
   color: white;
+  font-weight: 700;
+  font-size: 1.625em;
+  line-height: 131%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .gift-ideas__header::after {
@@ -761,10 +767,12 @@ main {
 
 .gift-ideas__text {
   color: white;
-}
-
-#gift-ideas__text-padding {
-  padding-top: 1.875em;
+  padding: 30px 0em;
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 131%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .photo-row {
@@ -782,37 +790,57 @@ main {
 .product-categories {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
   gap: 1.6em;
   align-self: center;
+  margin-bottom: 50px;
 }
 
 .category {
   display: flex;
   flex-direction: column;
-  background: white;
-  padding-bottom: 1.3em;
   align-items: center;
-  height: 46em;
-  justify-content: space-between;
+  background: white;
+  height: 100%;
 }
 
-.category__img {
-  width: 35em;
-  height: 25em;
+.category-promo__image {
+  width: 322px;
+  height: 210px;
+}
+
+.category-promo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px;
+  background-color: #AD937F;
+}
+
+.category-promo__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 131%;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  height: 330px;
+}
+
+.category-content .button--gray {
+  text-align: left;
 }
 
 .gifts-store__img {
   width: 24em;
   height: 21em;
-}
-
-.category__info {
-  display: flex;
-  flex-direction: column;
-  padding: 1.3em;
-  gap: 1.25em;
-  align-items: center;
 }
 
 .wholesale-products {
@@ -829,12 +857,6 @@ main {
   height: 23em;
   justify-content: space-between;
   align-items: center;
-}
-
-.product h3,
-p {
-  margin: 0;
-  text-align: center;
 }
 
 .wholesale-gifts {
