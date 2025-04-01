@@ -758,7 +758,6 @@ main {
 .gift-ideas__header::after {
   content: "";
   display: block;
-  width: 50em;
   height: 5px;
   border-top: 3px solid;
   border-bottom: 1px solid;
@@ -790,7 +789,7 @@ main {
 .product-categories {
   display: flex;
   flex-direction: row;
-  gap: 26px;
+  gap: 13px;
   align-self: center;
   margin-bottom: 50px;
 }
