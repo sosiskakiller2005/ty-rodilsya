@@ -221,8 +221,8 @@ header {
 }
 
 .header__logo {
-  width: 22.313em;
-  height: 12.1em;
+  width: 300px;
+  height: auto;
 }
 
 .header__container-right {
@@ -281,18 +281,21 @@ header {
   text-decoration: none;
 }
 
+.nav-main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .header__nav {
   display: flex;
-  align-items: stretch;
-  height: 5.938em;
-  width: 49.375em;
-  align-items: center;
-  align-self: center;
-  gap: 0.3em;
-  background: url(../img/pictures/Plenka.png);
-  background-attachment: local;
-  background-repeat: no-repeat;
-  background-size: contain;
+  gap: 5px;
+  --background: #411F03;
+  --size: 7px;
+  background:
+    conic-gradient(at 50% var(--size), var(--background) 75%, #0000 0) 0 0/calc(2*var(--size)) calc(100% - var(--size)) padding-box;
+  border: var(--size) solid var(--background);
+  padding: calc(var(--size) * 2.0) 0px;
 }
 
 .header__menu-button {
@@ -309,8 +312,7 @@ header {
   font-size: 0.85em;
   line-height: 100%;
   text-transform: uppercase;
-
-  padding: 0.3em 0.86em;
+  padding: 5px 9px;
 }
 
 .header__menu-button:hover {
@@ -319,14 +321,17 @@ header {
 }
 
 .header__shop-link {
+  position: relative;
+  z-index: 0;
   font-size: 0.9em;
   font-weight: 700;
   color: white;
+  background-color: #19BF2B;
   text-decoration: none;
   text-transform: uppercase;
-  margin-left: 0.9em;
-  margin-bottom: 0.7em;
+  padding: 15px 8px;
 }
+
 
 .header__nav-links {
   display: flex;
@@ -352,14 +357,17 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 /* Секция MAIN */
 
 .slider-section {
+  display: flex;
   position: relative;
   margin-bottom: 2.5em;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .slider {
@@ -392,22 +400,21 @@ main {
 .slider-controls {
   position: absolute;
   top: 200px;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  width: 91%;
   z-index: 0;
   /* Кнопки оказываются позади слайдера */
 }
 
 .slider__button--left {
   position: absolute;
-  left: -55px;
+  left: 0px;
 }
 
 .slider__button--right {
   position: absolute;
-  right: -55px;
+  right: 0px;
 }
 
 .slider__button {
@@ -564,7 +571,6 @@ main {
 .cards-info__header::after {
   content: "";
   display: block;
-  width: 50em;
   height: 4px;
   border-top: 3px solid;
   border-bottom: 2px solid;
@@ -953,7 +959,8 @@ main {
   color: var(--color-text);
   width: 100%;
   border: none;
-  border-bottom: 2px solid var(--color-text);;
+  border-bottom: 2px solid var(--color-text);
+  ;
   outline: none;
   font-size: 18px;
   padding: 5px;
