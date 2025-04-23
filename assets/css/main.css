@@ -575,14 +575,15 @@ main {
   border-top: 3px solid;
   border-bottom: 2px solid;
   margin: 16px auto 0;
+  width: 100%;
 }
 
 .cards-info__row {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 75em;
   max-height: 31em;
+  align-items: center;
 }
 
 .cards-info__row-reversed {
@@ -590,8 +591,11 @@ main {
   flex-direction: row-reverse;
   justify-content: space-between;
   margin: 0 auto;
-  width: 75em;
   max-height: 31em;
+}
+
+.cards-info__row-reversed img {
+  width: 30em;
 }
 
 .info-article {
@@ -657,6 +661,7 @@ main {
   display: flex;
   gap: 7em;
   margin-bottom: 1em;
+  justify-content: center;
 }
 
 .cards-type__article {
@@ -691,6 +696,10 @@ main {
 
 #button-container-centered {
   padding: 0px 26.5px;
+}
+
+.gift-ideas-wrapped {
+  display: none;
 }
 
 .gift-ideas {
@@ -794,10 +803,12 @@ main {
 
 .product-categories {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   gap: 13px;
   align-self: center;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .category {
@@ -811,6 +822,10 @@ main {
   width: 100%;
   height: 210px;
   object-fit: cover;
+}
+
+.category-content__text {
+  text-align: center;
 }
 
 .category-promo {
