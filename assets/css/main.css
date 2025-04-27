@@ -816,12 +816,17 @@ main {
   flex-direction: column;
   background: white;
   box-shadow: 4px 4px 10px 0px #B49F9080;
+  width: 35.375em;
 }
 
 .category-promo__image {
   width: 100%;
   height: 210px;
   object-fit: cover;
+}
+
+.category-promo__image-wide {
+  width: 31.5em;
 }
 
 .category-content__text {

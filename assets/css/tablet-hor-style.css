@@ -464,7 +464,6 @@
     flex-direction: column;
     background-color: var(--color-purple);
     position: relative;
-    width: 100%;
     overflow: hidden;
 
     padding: 3.75em;
