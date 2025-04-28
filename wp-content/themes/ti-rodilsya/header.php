@@ -11,47 +11,50 @@
 
 <body>
     <div class="container">
-        <header class="header">
-            <div class="header__left">
-                <a href="<?php echo get_permalink(19); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Логотип"
-                        class="header__logo">
-                </a>
+    <header>
+      <div class="header__container">
+        <a href="<?php echo get_permalink(18); ?>">
+          <img class="header__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/pictures/LogoTyRod.png" alt="" />
+        </a>
+        <div class="header__container-right">
+          <div class="header__contact-info">
+            <div class="contact-info__phone">
+              <h3 class="typography">+7 (915) 438-07-07</h3>
+              <a class="header__call-link" href="">заказать обратный звонок</a>
             </div>
-            <div class="header__right">
-                <div class="header__social">
-                </div>
-                <nav class="header__nav">
-                    <a href="<?php echo get_permalink(122); ?>" class="header__nav-item">Видеооткрытка с фильмами 1934 - 1994 год</a>
-                    <a href="#" class="header__nav-item">Видеооткрытка с фильмами к праздникам</a>
-                    <a href="#" class="header__nav-item">Индивидуальный проект</a>
-                    <a href="#" class="header__nav-item">Оптовым покупателям</a>
-                    <a href="#" class="header__nav-item">Корпоративным заказчикам</a>
-                </nav>
-                <a href="#" class="header__hamburger-btn">
-                        <i class="fa-solid fa-bars"></i>
-                </a>
-                <ul class="menu">
-                    <button id="closeBtn">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <li><a href="<?php echo get_permalink(12); ?>">Личный кабинет (вход/регистрация)</a></li>
-                    <li><a href="<?php echo get_permalink(74); ?>">Видеооткрытка с фильмами 1934 - 1994 год</a></li>
-                    <li><a href="#services">Индивидуальный Проект</a></li>
-                    <li><a href="#contact">Оптовым покупателям</a></li>
-                    <li><a href="#contact">Корпоративным заказчикам</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                    </ul>
-                <div class="header__login">
-                <?php if (is_user_logged_in()): ?>
-                    <a class="header_login-link" href="<?php echo get_permalink(14); ?>">Профиль</a>
-                    <a class="header_login-link" href="<?php echo get_permalink(22); ?>">Корзина</a>
-                    <a class="header_login-link" href="<?php echo wp_logout_url(home_url()); ?>">Выход</a>
-                <?php else: ?>
-                    <a href="#" class="header_login-link">У меня есть код. Смотреть онлайн</a>
-                    <a href="<?php echo get_permalink(8); ?>" class="header_login-link">Регистрация покупателя</a>
-                    <a href="<?php echo get_permalink(12); ?>" class="header_login-link">Вход</a>
-                <?php endif; ?>
-                </div>
+            <div class="header__socials">
+              <a href="" class="header__social-link">
+                <img src="../assets\img\icons\TgKor.png" alt="" />
+              </a>
+              <a href="" class="header__social-link">
+                <img src="..\assets\img\icons\WatKor.png" alt="" />
+              </a>
+              <a href="" class="header__social-link">
+                <img src="..\assets\img\icons\VkKor.png" alt="" />
+              </a>
+              <a href="" class="header__social-link">
+                <img src="..\assets\img\icons\OKKor.png" alt="" />
+              </a>
             </div>
-        </header>
+          </div>
+          <div class="nav-main">
+            <nav class="header__nav">
+              <a href="<?php echo get_permalink(28); ?>" class="header__menu-button">ВИДЕООТКРЫТКА С фильмами 1934 - 1994 год</a>
+              <a href="<?php echo get_permalink(16); ?>" class="header__menu-button">ВИДЕООТКРЫТКА С фильмами к праздникам</a>
+              <a href="<?php echo get_permalink(10); ?>" class="header__menu-button">Индивидуальный Проект</a>
+              <a href="<?php echo get_permalink(26); ?>" class="header__menu-button">ОПТОВЫМ ПОКУПАТЕЛЯМ</a>
+              <a href="<?php echo get_permalink(12); ?>" class="header__menu-button">Корпоративным заказчикам</a>
+            </nav>
+            <a href="<?php echo get_permalink(14); ?>" class="header__shop-link">Универмаг подарков</a>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav-links">
+        <a href="<?php echo get_permalink(24); ?>" class="header__nav-link">Регистрация</a>
+        <a href="<?php echo get_permalink(20); ?>" class="header__nav-link">Вход в Личный кабинет</a>
+        <a href="" class="header__nav-link">Контакты</a>
+      </div>
+      <div class="header__banner">
+        <h1 class="header__banner-text">Все фильмы с возможностью онлайн просмотра</h1>
+      </div>
+    </header>

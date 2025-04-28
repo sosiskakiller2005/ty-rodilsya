@@ -58,11 +58,14 @@ function load_dynamic_page() {
 function upload_scripts() {
 	wp_enqueue_style( 'main', get_stylesheet_uri() );
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/all.css' );
-	wp_enqueue_style( 'mediaquery', get_template_directory_uri() . '/assets/css/media.css' );
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/script.js');
-	wp_enqueue_script( 'buy', get_template_directory_uri() . '/assets/js/buy.js');
+	wp_enqueue_style( 'tablet-hor-style', get_template_directory_uri() . '/assets/css/tablet-hor-style.css' );
+	wp_enqueue_script( 'wrap', get_template_directory_uri() . '/assets/js/wrap.js');
 	wp_enqueue_script( 'add_product_by_code_script', get_template_directory_uri() . '/assets/js/add-product-by-code-script.js');
-	wp_enqueue_script( 'dynamic_content_script', get_template_directory_uri() . '/assets/js/dynamic-content.js');
+	wp_enqueue_script( 'dynamic-content', get_template_directory_uri() . '/assets/js/dynamic-content.js');
+	wp_enqueue_script( 'gift-ideas-slider', get_template_directory_uri() . '/assets/js/gift-ideas-slider.js');
+	wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/slider.js');
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/script.js');
+	wp_enqueue_script( 'tv-switcher', get_template_directory_uri() . '/assets/js/tv-switcher.js');
     // Передаём URL для AJAX-запросов
     wp_localize_script('dynamic_content_script', 'ajax_object', array(
         'ajaxurl' => admin_url('admin-ajax.php')
