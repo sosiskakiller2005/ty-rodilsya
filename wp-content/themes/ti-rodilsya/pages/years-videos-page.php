@@ -72,7 +72,7 @@ Template Name: Шаблон страницы видеооткрыток по г�
                   Северный полюс – Ванкувер. Страна с размахом отмечает
                   юбилей Сталина. А под конец десятилетия начинается Вторая мировая война.
                 </p>
-                <div class="button-container short-article-btn">
+                <div class="button-container-short">
                   <button class="button--gray article-btn">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/Tv-brown.png" alt="">СМОТРЕТЬ РОЛИК
                   </button>
@@ -89,18 +89,17 @@ Template Name: Шаблон страницы видеооткрыток по г�
               <div class="decade-info">
                 <h2>ВИДЕООТКРЫТКИ О 40-Х ГОДАХ</h2>
                 <p>
-                  30-е годы – это время невиданного трудового энтузиазма: первых метростроевцев и стахановцев. Герои
-                  страны – летчики, полярники, пограничники, знатные
-                  рабочие и колхозники. Неслучайно именно в это десятилетие учреждено звания Героя Советского Союза. На
-                  экраны страны выходят «Веселые ребята» и «Чапаев»,
-                  «Цирк» и «Волга-Волга», а настоящим символом отечественного кино становится Любовь Орлова –
-                  единственная
-                  и неподражаемая. Впервые проведены чемпионаты
-                  СССР по футболу и хоккею с мячом. Валерий Чкалов совершает беспосадочный перелет Москва – Северный
-                  полюс – Ванкувер. Страна с размахом отмечает юбилей
-                  Сталина. А под конец десятилетия начинается Вторая мировая война.
+                  40-е годы – одна из самых трагичных страниц в летописи нашей страны и во всей истории
+                  человечества. Вторая мировая война разрушительным ураганом прошлась по десяткам стран и
+                  миллионам человеческих судеб. Но именно Советский Союз, как бы сейчас ни извращали историю,
+                  стал героической силой, которая остановила фашизм. Наша страна, совершив один подвиг – военный,
+                  вынуждена проявить не меньше героизма для восстановления собственной экономики, подорванной
+                  затяжной и разрушительной войной. В 40-е на дорогах страны увидят новые «Москвичи» и «Победы».
+                  На экраны выйдут ставшие позже киноклассикой «Кубанские казаки», «Небесный тихоход» и «Золушка».
+                  А Москва отметит 800-летний юбилей, во время которого будут заложены знаменитые «сестры» –
+                  сталинские высотки столицы.
                 </p>
-                <div class="button-container short-article-btn">
+                <div class="button-container-short">
                   <button class="button--gray article-btn">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/Tv-brown.png" alt="">СМОТРЕТЬ РОЛИК
                   </button>
@@ -128,7 +127,7 @@ Template Name: Шаблон страницы видеооткрыток по г�
                 Азии разгорается война между Южной и Северной
                 Кореей.
               </p>
-              <div class="button-container short-article-btn">
+              <div class="button-container-short">
                 <button class="button--gray article-btn">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/Tv-brown.png" alt="">СМОТРЕТЬ РОЛИК
                 </button>
@@ -153,7 +152,7 @@ Template Name: Шаблон страницы видеооткрыток по г�
                 первым в истории из пассажирских авиалайнеров
                 преодолевает звуковой барьер.
               </p>
-              <div class="button-container short-article-btn">
+              <div class="button-container-short">
                 <button class="button--gray article-btn">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/Tv-brown.png" alt="">СМОТРЕТЬ РОЛИК
                 </button>
@@ -178,7 +177,7 @@ Template Name: Шаблон страницы видеооткрыток по г�
                 объединяет тысячи людей со всех уголков нашей страны.
                 В Тольятти с конвейера сходит первая «копейка» – ВАЗ-2101.
               </p>
-              <div class="button-container short-article-btn">
+              <div class="button-container-short">
                 <button class="button--gray article-btn">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/Tv-brown.png" alt="">СМОТРЕТЬ РОЛИК
                 </button>
@@ -202,7 +201,7 @@ Template Name: Шаблон страницы видеооткрыток по г�
                 Шаттл, а в Советском Союзе проходят испытания
                 «Бурана» – космического корабля многоразового использования.
               </p>
-              <div class="button-container short-article-btn">
+              <div class="button-container-short">
                 <button class="button--gray article-btn">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/Tv-brown.png" alt="">СМОТРЕТЬ РОЛИК
                 </button>
@@ -226,7 +225,7 @@ Template Name: Шаблон страницы видеооткрыток по г�
                 сих пор иностранным алкоголем. Главный герой
                 телерекламы - Леня Голубков.
               </p>
-              <div class="button-container short-article-btn">
+              <div class="button-container-short">
                 <button class="button--gray article-btn">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/Tv-brown.png" alt="">СМОТРЕТЬ РОЛИК
                 </button>
