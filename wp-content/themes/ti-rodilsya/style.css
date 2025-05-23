@@ -1211,6 +1211,15 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  .products {
+    display: flex;
+  }
+
+  /* .products-item {
+    width: 14.625em;
+    height: 28.375em;
+  } */
   
   /* КОНЕЦ СЕКЦИИ МАГАЗИНА ВИДЕООТКРЫТОК */
   

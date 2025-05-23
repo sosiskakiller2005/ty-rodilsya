@@ -1,17 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-  let products = document.getElementById('products');
-  let button = document.getElementById('buyBtn');
+  // Находим все кнопки разворачивания
+  const buttons = document.querySelectorAll('.unwrap-btn');
 
-  button.addEventListener('click', function () {
-    if (products.classList.contains('hidden')) {
-      products.classList.remove('hidden');
-      products.classList.add('visible')
-      this.textContent = 'СВЕРНУТЬ ДЕСЯТИЛЕТИЕ';
-    } else {
-      products.classList.remove('visible')
-      products.classList.add('hidden');
-      this.textContent = 'РАЗВЕРНУТЬ ДЕСЯТИЛЕТИЕ';
-    }
+  // Добавляем обработчик событий для каждой кнопки
+  buttons.forEach(button => {
+    button.addEventListener('click', function () {
+      // Находим родительский элемент десятилетия
+      const decadeArticle = this.closest('.decade-article');
+
+      // Находим блок товаров внутри этого десятилетия
+      const products = decadeArticle.nextElementSibling;
+
+      if (products && products.classList.contains('products')) {
+        // Переключаем классы видимости
+        if (products.classList.contains('hidden')) {
+          products.classList.remove('hidden');
+          products.classList.add('visible');
+          this.textContent = 'СВЕРНУТЬ ДЕСЯТИЛЕТИЕ';
+        } else {
+          products.classList.remove('visible');
+          products.classList.add('hidden');
+          this.textContent = 'РАЗВЕРНУТЬ ДЕСЯТИЛЕТИЕ';
+        }
+      }
+    });
   });
 });
 

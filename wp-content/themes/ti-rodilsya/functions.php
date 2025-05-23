@@ -57,6 +57,7 @@ function load_dynamic_page() {
 
 function upload_scripts() {
 	wp_enqueue_style( 'main', get_stylesheet_uri() );
+	wp_enqueue_style( 'style', get_template_directory_uri() . 'style.css' );
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/assets/css/all.css' );
 	wp_enqueue_style( 'tablet-hor-style', get_template_directory_uri() . '/assets/css/tablet-hor-style.css' );
 	wp_enqueue_script( 'wrap', get_template_directory_uri() . '/assets/js/wrap.js');
